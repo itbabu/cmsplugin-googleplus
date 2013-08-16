@@ -1,0 +1,40 @@
+import os
+from setuptools import setup, find_packages
+
+README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
+
+# allow setup.py to be run from any path
+os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+
+setup(
+    name='cmsplugin-googleplus',
+    version='0.1',
+    packages=['cmsplugin_googleplus'],
+    include_package_data=True,
+    license='BSD License',  # example license
+    description='Django-CMS plugin for Google Plus Activities',
+    long_description=README,
+    url='https://github.com/itbabu/cmsplugin-googleplus',
+    author='Marco Badan',
+    author_email='info@marcobadan.com',
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License', # example license
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+    ],
+    install_requires=[
+        'google-api-python-client=1.1',
+        'python-dateutil=2.1'
+    ],
+    tests_require=[
+        'mock=1.0.1'
+    ],
+    packages=find_packages()
+)

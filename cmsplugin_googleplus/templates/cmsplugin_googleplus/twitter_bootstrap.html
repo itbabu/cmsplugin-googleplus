@@ -1,0 +1,86 @@
+{% load sekizai_tags i18n humanize %}
+
+
+{% addtoblock "css" %}<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">{% endaddtoblock %}
+{% addtoblock "css" %}<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css" rel="stylesheet">{% endaddtoblock %}
+{% addtoblock "js" %}<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>{% endaddtoblock %}
+
+<div class="panel">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Google Plus</div>
+<ul class="media-list list-group">
+{%  for item in activity_list %}
+    <li class="media list-group-item">
+        <a class="pull-left" href="{{ item.actor.url }}" target="_blank">
+            <img class="media-object img-circle" src="{{ item.actor.image.url }}">
+        </a>
+        <div class="media-body">
+            <a href="{{ item.actor.url }}" target="_blank"><h4 class="media-heading"><strong>{{ item.actor.displayName }}</strong></h4></a>
+            <p class="text-info">{% trans "Published" %} {{ item.published|naturaltime }}</p>
+
+            {% if item.verb == "share" %}
+                <div>
+                {{  item.annotation|safe|striptags|truncatechars:instance.truncate_chars }}
+                 </div>
+                <hr>
+                 <div>
+                     <strong><a href="{{ item.object.actor.url }}">
+                         {{ item.object.actor.displayName }}</a></strong>
+                    <a href="{{ item.object.url }}">{% trans "originally shared" %}</a>:
+                </div>
+            {% endif %}
+            {%  if item.object.content %}
+                <p>{{ item.object.content|safe|striptags|truncatechars:instance.truncate_chars }}</p>
+            {% endif %}
+            {% if item.object.attachments %}
+                {%  for attachment in item.object.attachments %}
+                <div class="media">
+                        {% if attachment.image.url  %}
+                            <img class="media-object pull-left img-rounded" src="{{ attachment.image.url }}" style="width: 64px;">
+                        {% elif attachment.thumbnails %}
+                            <img class="media-object pull-left img-rounded" src="{{ attachment.thumbnails.0.image.url }}" style="width: 64px;">
+                        {%  endif %}
+
+                      <div class="media-body">
+
+                        <h4 class="media-heading">
+                            <span class="
+                            {% if attachment.objectType == "photo"  %}glyphicon glyphicon-picture
+                            {%  elif attachment.objectType == "video" %}glyphicon glyphicon-facetime-video
+                            {%  elif attachment.objectType == "article" %}glyphicon glyphicon-globe
+                            {%  elif attachment.objectType == "album" %}glyphicon glyphicon-picture
+                            {% endif %}">
+
+                            {{ attachment.objectType|capfirst }}</span>
+                        </h4>
+                            {{ attachment.displayName|truncatechars:instance.truncate_chars }}
+                      </div>
+                    </div>
+                {%  endfor %}
+            {% endif %}
+        <hr>
+        <p><strong><a href="{{ item.url }}" target="_blank">{% trans "Read more" %} &#x25B8;</a></strong>
+        <small class="text-muted pull-right">
+            {% if item.object.replies.totalItems != 0 %}
+                <button type="button" class="btn btn-default btn-xs" disabled="disabled">
+                    <strong>{{ item.object.replies.totalItems }}</strong> {% trans "replies"|upper %}
+                </button>
+            {% endif %}
+            {% if item.object.plusoners.totalItems != 0 %}
+                <button type="button" class="btn btn-default btn-xs" disabled="disabled">
+                    <strong>{{ item.object.plusoners.totalItems }}</strong> +1{% endif %}
+                </button>
+            {% if item.object.resharers.totalItems != 0 %}
+                <button type="button" class="btn btn-default btn-xs" disabled="disabled">
+                    <strong>{{ item.object.resharers.totalItems }}</strong>
+                    <span class="glyphicon glyphicon-share-alt"></span>
+                </button>
+            {% endif %}
+        </small>
+        </p>
+
+        </div>
+    </li>
+{% endfor %}
+</ul>
+</div>
