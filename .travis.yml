@@ -11,7 +11,8 @@ install:
     - pip install -q -r "test_requirements/django-$DJANGO.txt" --use-mirrors
 
 script:
-    python runtests.py
+    - coverage run ./runtests.py
+    - coverage report
 
 after_success:
-  - coveralls
+    - coveralls

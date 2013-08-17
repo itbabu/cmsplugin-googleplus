@@ -1,6 +1,8 @@
 import os
 import sys
+
 from django.conf import settings
+
 
 def configure():
     if not settings.configured:
