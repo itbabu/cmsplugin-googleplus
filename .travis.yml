@@ -13,5 +13,10 @@ install:
 script:
     python runtests.py
 
+matrix:
+  exclude:
+    - python: 3.3
+      env: DJANGO=1.4
+
 after_success:
   - coveralls
