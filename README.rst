@@ -1,4 +1,3 @@
-====================
 cmsplugin-googleplus
 ====================
 
@@ -8,6 +7,7 @@ Still in Pre-Alpha.
 
 Continuous Integration:
 -----------------------
+
 .. image:: https://secure.travis-ci.org/itbabu/cmsplugin-googleplus.png?branch=master
     :target: http://travis-ci.org/#!/itbabu/cmsplugin-googleplus?branch=master
 
@@ -24,10 +24,10 @@ Requirements
 Tests
 -----
 
-    Requirements
-    ^^^^^^^^^^^^
-    * mock - 1.0.1
-    * django-nose - 1.2
-    * coverage - 3.6
+Requirements
+^^^^^^^^^^^^
+* mock - 1.0.1
+* django-nose - 1.2
+* coverage - 3.6
 
     $ coverage run runtests.py && coverage report
