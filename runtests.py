@@ -35,7 +35,6 @@ def configure():
                 'cms.plugins.teaser',
                 'djangocms_text_ckeditor',
                 'cms.plugins.video',
-                'cmsplugin_googleplus',
                 'cms',
                 'cms.stacks',
                 'mptt',
