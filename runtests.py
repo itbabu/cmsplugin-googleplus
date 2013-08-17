@@ -34,7 +34,6 @@ def configure():
                 'djangocms_text_ckeditor',
                 'cms.plugins.video',
                 'cms',
-                'cms.stacks',
                 'mptt',
                 'menus',
                 'sekizai',
