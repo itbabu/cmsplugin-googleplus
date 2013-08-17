@@ -1,7 +1,5 @@
 import os
 import sys
-from cms.utils import get_cms_setting
-
 from django.conf import settings
 
 def configure():
