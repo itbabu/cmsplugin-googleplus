@@ -1,7 +1,8 @@
 cmsplugin-googleplus
 ====================
 
-Django-cms plugin for fetching Google+ activities
+Django-cms plugin for fetching Google+ activities.
+You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>`_ at the bottom of this README.
 
 Still in Alpha.
 
@@ -115,7 +116,7 @@ Run the test with coverage
 Preview
 ^^^^^^^
 
-.. image:: https://github.com/itbabu/cmsplugin-googleplus/raw/master/docs/images/cmsplugin-googleplus-preview.png
+.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/cmsplugin-googleplus-preview.png
 
 
 Have Fun!
