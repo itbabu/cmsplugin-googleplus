@@ -114,7 +114,7 @@ Run the test with coverage
 
 
 Preview
-^^^^^^^
+-------
 
 .. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/cmsplugin-googleplus-preview.png
 
