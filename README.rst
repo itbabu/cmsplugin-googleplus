@@ -4,7 +4,7 @@ cmsplugin-googleplus
 Django-cms plugin for fetching Google+ activities.
 You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>`_ at the bottom of this README.
 
-Still in Alpha.
+Still in Beta.
 
 Continuous Integration:
 -----------------------
@@ -68,8 +68,8 @@ How to use it
 
 An `activity <https://developers.google.com/+/api/latest/activities>`_ is a note that a user posts to their stream.
 You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a collection of activities
- from one user or you can list a collection of activities
- as result of a `search <https://developers.google.com/+/api/latest/activities/search>`_.
+from one user or you can list a collection of activities
+as result of a `search <https://developers.google.com/+/api/latest/activities/search>`_.
 
 Template
 --------
