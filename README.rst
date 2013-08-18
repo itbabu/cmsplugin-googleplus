@@ -92,8 +92,8 @@ Cache
 
 The activities are cached so you need to:
 
-1. Set up your cache system `<https://docs.djangoproject.com/en/dev/topics/cache/#setting-up-the-cache>`_
-2. Optional Decide the activities cache duration. Default is 5 minutes.
+1. `Set up your cache system <https://docs.djangoproject.com/en/dev/topics/cache/#setting-up-the-cache>`_
+2. (Optional) Decide the activities cache duration. Default is 5 minutes.
    Inside ``settings.py`` add::
 
        GOOGLEPLUS_PLUGIN_CACHE_DURATION=<custom cache duration>
