@@ -39,8 +39,7 @@ Configure
 5. Select *Services* and get the *API key*
 6. Add the *API key* to your ``settings.py``::
 
-        ...
-        GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = <ypur api key>
+        GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = <your api key>
 
 Run
 ---
@@ -62,6 +61,41 @@ Upgrade
     python manage.py syncdb
     python manage.py migrate
 
+
+How to use it
+-------------
+
+An `activity <https://developers.google.com/+/api/latest/activities>`_ is a note that a user posts to their stream.
+You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a collection of activities or you can
+`search <https://developers.google.com/+/api/latest/activities/search>`_ through activities.
+
+Template
+^^^^^^^^
+
+This plugin has a example template that uses `Twitter Bootstrap <http://getbootstrap.com/>`_
+You can use it as skeleton for you templates.
+
+Create your template and inside ``settings.py`` add::
+
+    GOOGLEPLUS_PLUGIN_TEMPLATES
+
+     GOOGLEPLUS_PLUGIN_TEMPLATES = (
+        ('cmsplugin_googleplus/twitter_bootstrap.html', _('Example Template using Twitter Bootstrap')),
+        ('path/to/my/template' _('My beautiful template'))
+    )
+
+Cache
+^^^^^
+
+The activities are cached so you need to:
+
+1. Set up your cache system `<https://docs.djangoproject.com/en/dev/topics/cache/#setting-up-the-cache>`_
+2. Optional Decide the activities cache duration. Default is 5 minutes.
+   Inside ``settings.py`` add::
+
+       GOOGLEPLUS_PLUGIN_CACHE_DURATION=<custom cache duration>
+
+
 Tests
 -----
 
@@ -76,3 +110,12 @@ Run the test with coverage
 ::
 
     $ coverage run runtests.py && coverage report -m
+
+
+Preview
+^^^^^^^
+
+.. image:: https://github.com/itbabu/cmsplugin-googleplus/raw/master/docs/images/cmsplugin-googleplus-preview.png
+
+
+Have Fun!
