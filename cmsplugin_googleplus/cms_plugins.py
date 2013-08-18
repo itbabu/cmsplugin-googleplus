@@ -76,8 +76,7 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
         """
         Cleans up the activities given by the api:
         Google+ API uses RFC3339 format for dates like published date of an activity.
-        We need to parse these date so they will be displayed in a nicer way.
-
+        We need to parse these dates so they will be displayed in a nicer way.
         """
         parsed_activity_list = []
         for activity in activity_list:

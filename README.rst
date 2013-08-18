@@ -22,10 +22,10 @@ Install
 
 1. Install these packages and their requirements:
 
-    * `django-cms <https://pypi.python.org/pypi/django-cms>`_
-    * `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
-    * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
-    * `python-dateutil - 2.1 <https://pypi.python.org/pypi/python-dateutil>`_
+* `django-cms <https://pypi.python.org/pypi/django-cms>`_
+* `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
+* `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
+* `python-dateutil - 2.1 <https://pypi.python.org/pypi/python-dateutil>`_
 
 
 2. Install `cmsplugin-googleplus <https://github.com/itbabu/cmsplugin-googleplus>`_ in your environment.
@@ -71,7 +71,7 @@ You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a c
 `search <https://developers.google.com/+/api/latest/activities/search>`_ through activities.
 
 Template
-^^^^^^^^
+--------
 
 This plugin has a example template that uses `Twitter Bootstrap <http://getbootstrap.com/>`_
 You can use it as skeleton for you templates.
@@ -87,7 +87,7 @@ Create your template and inside ``settings.py`` add::
     )
 
 Cache
-^^^^^
+-----
 
 The activities are cached so you need to:
 
@@ -97,15 +97,17 @@ The activities are cached so you need to:
 
        GOOGLEPLUS_PLUGIN_CACHE_DURATION=<custom cache duration>
 
+The actual quota limits for the google+ api are 10,000 requests/day
+
 
 Tests
 -----
 
 Requirements
 ^^^^^^^^^^^^
-* mock - 1.0.1
-* django-nose - 1.2
-* coverage - 3.6
+* `mock - 1.0.1 <https://pypi.python.org/pypi/mock>`_
+* `django-nose - 1.2 <https://pypi.python.org/pypi/django-nose>`_
+* `coverage - 3.6<https://pypi.python.org/pypi/coverage>`_
 
 Run the test with coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
