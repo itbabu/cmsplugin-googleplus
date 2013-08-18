@@ -39,7 +39,8 @@ Configure
 5. Select *Services* and get the *API key*
 6. Add the *API key* to your ``settings.py``::
 
-        $ GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = <api key>``
+        ...
+        GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = <ypur api key>
 
 Run
 ---
@@ -74,4 +75,4 @@ Run the test with coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 ::
 
-    coverage run runtests.py && coverage report -m
+    $ coverage run runtests.py && coverage report -m
