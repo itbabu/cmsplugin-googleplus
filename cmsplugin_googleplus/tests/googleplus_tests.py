@@ -149,7 +149,3 @@ class GooglePlusPluginTestCase(BaseGooglePlusTestCase):
         response = self.client.get(self.page.get_absolute_url())
         self.assertEquals(response.status_code, 200)
         self.assertEqual(len(response.context['activity_list']), 20)
-
-
-
-

@@ -78,11 +78,12 @@ You can use it as skeleton for you templates.
 
 Create your template and inside ``settings.py`` add::
 
-    GOOGLEPLUS_PLUGIN_TEMPLATES
 
-     GOOGLEPLUS_PLUGIN_TEMPLATES = (
-        ('cmsplugin_googleplus/twitter_bootstrap.html', _('Example Template using Twitter Bootstrap')),
-        ('path/to/my/template' _('My beautiful template'))
+    GOOGLEPLUS_PLUGIN_TEMPLATES = (
+        ('cmsplugin_googleplus/twitter_bootstrap.html',
+         _('Example Template using Twitter Bootstrap')),
+        ('path/to/my/template',
+         _('My beautiful template'))
     )
 
 Cache
