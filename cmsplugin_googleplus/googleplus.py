@@ -44,7 +44,6 @@ class GooglePlusAPI(object):
                 activities_resource = self.service.activities()
                 request = activities_resource.list(userId=user_id, collection=collection,
                                                    maxResults=results, fields='items')
-                #import ipdb; ipdb.set_trace()
                 activities_document = request.execute()
                 if 'items' in activities_document:
                     return activities_document['items']
@@ -54,7 +53,7 @@ class GooglePlusAPI(object):
                 logger.exception('Google Plus API error: % s' % e)
                 if not settings.DEBUG:
                     # fail silently if it's not possible to connect to the service
-                    self.service = None
+                    return []
                 else:
                     raise
 
@@ -98,6 +97,6 @@ class GooglePlusAPI(object):
                 logger.exception('Google Plus API error: % s' % e)
                 if not settings.DEBUG:
                     # fail silently if it's not possible to connect to the service
-                    self.service = None
+                    return []
                 else:
                     raise

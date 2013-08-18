@@ -30,4 +30,5 @@ Requirements
 * django-nose - 1.2
 * coverage - 3.6
 
-    $ coverage run runtests.py && coverage report
+
+    $ coverage run runtests.py && coverage report -m
