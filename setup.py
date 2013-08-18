@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='cmsplugin-googleplus',
-    version='0.1.1',
+    version='0.2.1',
     include_package_data=True,
     license='MIT License',
     description='Django-CMS plugin for Google Plus Activities',
@@ -17,7 +17,7 @@ setup(
     author='Marco Badan',
     author_email='info@marcobadan.com',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
