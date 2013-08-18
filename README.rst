@@ -67,13 +67,14 @@ How to use it
 -------------
 
 An `activity <https://developers.google.com/+/api/latest/activities>`_ is a note that a user posts to their stream.
-You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a collection of activities or you can
-`search <https://developers.google.com/+/api/latest/activities/search>`_ through activities.
+You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a collection of activities
+ from one user or you can list a collection of activities
+ as result of a `search <https://developers.google.com/+/api/latest/activities/search>`_.
 
 Template
 --------
 
-This plugin has a example template that uses `Twitter Bootstrap <http://getbootstrap.com/>`_
+This plugin has an example template that uses `Twitter Bootstrap 3 <http://getbootstrap.com/>`_.
 You can use it as skeleton for you templates.
 
 Create your template and inside ``settings.py`` add::
@@ -118,6 +119,8 @@ Run the test with coverage
 
 Preview
 -------
+
+This is how the plugin looks with the example template.
 
 .. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/cmsplugin-googleplus-preview.png
 
