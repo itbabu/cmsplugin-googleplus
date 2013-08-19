@@ -1,6 +1,6 @@
 include LICENSE
 include README.rst
-include CHANGELOG.txt
+include AUTHORS
 recursive-include cmsplugin_googleplus/templates/cmsplugin_googleplus *
 recursive-include cmsplugin_googleplus/tests/data *
 recursive-include cmsplugin_googleplus/tests/test_project/templates *
