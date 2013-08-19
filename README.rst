@@ -34,10 +34,10 @@ Configure
 ---------
 
 1. `Configure django-cms <http://django-cms.readthedocs.org/en/latest/getting_started/tutorial.html#configuration-and-setup>`_
-2. Add ``cmsplugin-googleplus`` to the ``INSTALLED_APPS`` list in your project's ``settings.py`` and run the syncdb command on your manage.py.
+2. Add ``cmsplugin-googleplus`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
 3. Go to the `google apis console <https://code.google.com/apis/console>`_ and create a new project (a google account is required)
 4. Select *Services* and activate *Google+ API*
-5. Select *Services* and get the *API key*
+5. Select *API Access* and get the *API key*
 6. Add the *API key* to your ``settings.py``::
 
         GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = <your api key>
