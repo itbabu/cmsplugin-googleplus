@@ -6,8 +6,8 @@ You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>
 
 Still in Beta.
 
-Continuous Integration:
------------------------
+Continuous Integration
+----------------------
 
 .. image:: https://secure.travis-ci.org/itbabu/cmsplugin-googleplus.png?branch=master
     :target: http://travis-ci.org/#!/itbabu/cmsplugin-googleplus?branch=master

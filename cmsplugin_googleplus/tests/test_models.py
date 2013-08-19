@@ -1,7 +1,11 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 
-from cmsplugin_googleplus.models import GooglePlusActivities
+from ..models import GooglePlusActivities
+
+__all__ = [
+    'GooglePlusActivitiesTestCase'
+]
 
 
 class GooglePlusActivitiesTestCase(TestCase):

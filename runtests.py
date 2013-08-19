@@ -9,7 +9,7 @@ def configure():
 
         # Helper function to extract absolute path
         location = lambda x: os.path.join(
-            os.path.dirname(os.path.realpath(__file__)), 'cmsplugin_googleplus', 'tests', 'test_project', x)
+            os.path.dirname(os.path.realpath(__file__)), 'cmsplugin_googleplus', 'tests', 'example_project', x)
 
         test_settings = {
             'DATABASES': {
@@ -55,7 +55,7 @@ def configure():
             'TEMPLATE_DIRS': (
                 location('templates'),
             ),
-            'ROOT_URLCONF': 'cmsplugin_googleplus.tests.test_project.urls',
+            'ROOT_URLCONF': 'cmsplugin_googleplus.tests.example_project.urls',
 
             'MIDDLEWARE_CLASSES': (
                 'django.contrib.sessions.middleware.SessionMiddleware',
