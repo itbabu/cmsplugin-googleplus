@@ -20,7 +20,7 @@ class GooglePlusActivities(CMSPlugin):
                                                  "From 1 to 100. Default is 10."),)
     truncate_chars = models.PositiveIntegerField(
         _('truncate chars'), default=150,
-        help_text=_('Truncates the content, annotation and attachent after a certain number of characters.'))
+        help_text=_('Truncates the content, annotation and attachment after a certain number of characters.'))
     google_user = models.CharField(_('Google+ User Id'), blank=True,
                                    help_text=_('The ID of the user to get activities for'),
                                    max_length=75)

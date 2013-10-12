@@ -100,6 +100,10 @@ The activities are cached so you need to:
 
 The actual 'Courtesy Limit' for the Google+ API is 10,000 requests/day
 
+Translation
+-----------
+For translators I've set up a `Transifex account <https://www.transifex.com/projects/p/cmsplugin-googleplus/>`_
+where you can add languages and translate the .po
 
 Tests
 -----
@@ -126,3 +130,5 @@ This is how the plugin looks with the example template.
 
 
 Have Fun!
+
+Marco
