@@ -4,12 +4,19 @@ python:
     - 2.7
 
 env:
-    - DJANGO=1.4
-    - DJANGO=1.5
+    - DJANGO=1.4 DJANGOCMS=2.4
+    - DJANGO=1.5 DJANGOCMS=2.4
+    - DJANGO=1.4 DJANGOCMS=3
+    - DJANGO=1.5 DJANGOCMS=3
+
 
 install:
     - pip install -q -r "test_requirements/django-$DJANGO.txt" --use-mirrors
-
+    - if [ "${DJANGOCMS}" == "3" ]; then
+          pip install -q https://github.com/divio/django-cms/archive/3.0.0.beta2.tar.gz ;
+      else
+          pip install -q django-cms==2.4 --use-mirrors ;
+      fi
 script:
     - coverage run ./runtests.py
     - coverage report

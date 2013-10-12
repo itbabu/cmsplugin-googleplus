@@ -22,8 +22,8 @@ Install
 
 1. Install these packages and their requirements:
 
-* `django-cms <https://pypi.python.org/pypi/django-cms>`_
 * `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
+* `django-cms>=2.4 <https://pypi.python.org/pypi/django-cms>`_
 * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
 * `python-dateutil - 2.1 <https://pypi.python.org/pypi/python-dateutil>`_
 
@@ -98,8 +98,12 @@ The activities are cached so you need to:
 
        GOOGLEPLUS_PLUGIN_CACHE_DURATION = <custom_cache_duration>
 
-The actual quota limits for the google+ api are 10,000 requests/day
+The actual 'Courtesy Limit' for the Google+ API is 10,000 requests/day
 
+Translation
+-----------
+For translators I've set up a `Transifex account <https://www.transifex.com/projects/p/cmsplugin-googleplus/>`_
+where you can add languages and translate the .po
 
 Tests
 -----
@@ -126,3 +130,5 @@ This is how the plugin looks with the example template.
 
 
 Have Fun!
+
+Marco
