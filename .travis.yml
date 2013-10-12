@@ -5,7 +5,10 @@ python:
 
 env:
     - DJANGO=1.4 DJANGOCMS=2.4
+    - DJANGO=1.5 DJANGOCMS=2.4
+    - DJANGO=1.4 DJANGOCMS=3
     - DJANGO=1.5 DJANGOCMS=3
+
 
 install:
     - pip install -q -r "test_requirements/django-$DJANGO.txt" --use-mirrors
