@@ -1,7 +1,8 @@
 include LICENSE
 include README.rst
 include AUTHORS
-recursive-include cmsplugin_googleplus/templates/cmsplugin_googleplus *
+recursive-include cmsplugin_googleplus/locale *
+recursive-include cmsplugin_googleplus/templates *
 recursive-include cmsplugin_googleplus/tests/data *
 recursive-include cmsplugin_googleplus/tests/test_project/templates *
 recursive-include docs *
