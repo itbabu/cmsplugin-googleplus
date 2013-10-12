@@ -98,7 +98,7 @@ The activities are cached so you need to:
 
        GOOGLEPLUS_PLUGIN_CACHE_DURATION = <custom_cache_duration>
 
-The actual quota limits for the google+ api are 10,000 requests/day
+The actual 'Courtesy Limit' for the Google+ API is 10,000 requests/day
 
 
 Tests
