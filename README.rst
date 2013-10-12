@@ -22,8 +22,8 @@ Install
 
 1. Install these packages and their requirements:
 
-* `django-cms <https://pypi.python.org/pypi/django-cms>`_
 * `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
+* `django-cms>=2.4 <https://pypi.python.org/pypi/django-cms>`_
 * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
 * `python-dateutil - 2.1 <https://pypi.python.org/pypi/python-dateutil>`_
 
