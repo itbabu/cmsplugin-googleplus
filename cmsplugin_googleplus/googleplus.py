@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import logging
 
 from django.conf import settings
@@ -49,7 +50,7 @@ class GooglePlusAPI(object):
                     return activities_document['items']
                 else:
                     return []
-            except HttpError, e:
+            except HttpError as e:
                 logger.exception('Google Plus API error: % s' % e)
                 if not settings.DEBUG:
                     # fail silently if it's not possible to connect to the service
@@ -93,7 +94,7 @@ class GooglePlusAPI(object):
                     return activities_document['items']
                 else:
                     return []
-            except HttpError, e:
+            except HttpError as e:
                 logger.exception('Google Plus API error: % s' % e)
                 if not settings.DEBUG:
                     # fail silently if it's not possible to connect to the service

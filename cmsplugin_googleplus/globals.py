@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.utils.translation import ugettext_lazy as _
 
 # The following language codes are available for search methods in people and activities resources
