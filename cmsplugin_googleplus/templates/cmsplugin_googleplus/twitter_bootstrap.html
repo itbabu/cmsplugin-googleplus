@@ -46,16 +46,14 @@
                         <h4 class="media-heading">
 
                             {% if attachment.objectType == "photo"  %}
-                                <span class="glyphicon glyphicon-picture">{% trans "Photo" %}</span>
+                                <span class="glyphicon glyphicon-picture"></span> {% trans "Photo" %}
                             {%  elif attachment.objectType == "video" %}
-                                <span class="glyphicon glyphicon-facetime-video">{% trans "Video" %}</span>
+                                <span class="glyphicon glyphicon-facetime-video"></span> {% trans "Video" %}
                             {%  elif attachment.objectType == "article" %}
-                                <span class="glyphicon glyphicon-globe">{% trans "Article" %}</span>
+                                <span class="glyphicon glyphicon-globe"></span> {% trans "Article" %}
                             {%  elif attachment.objectType == "album" %}
-                                <span class="glyphicon glyphicon-picture">
-                                    {% trans "Album" %}
-                                </span>
-                            {% endif %}">
+                                <span class="glyphicon glyphicon-picture"></span> {% trans "Album" %}
+                            {% endif %}
                         </h4>
                             {{ attachment.displayName|truncatechars:instance.truncate_chars }}
                       </div>
