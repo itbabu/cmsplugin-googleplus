@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import os
 import sys
 
@@ -97,7 +98,7 @@ if __name__ == '__main__':
     if args:
         # Some args specified.  Check to see if any nose options have been
         # specified.  If they have, then don't set any
-        has_options = any(map(lambda x: x.startswith('--'), args))
+        has_options = any([x.startswith('--') for x in args])
         if not has_options:
             args.extend(['-s', '-x', '--with-specplugin'])
         else:

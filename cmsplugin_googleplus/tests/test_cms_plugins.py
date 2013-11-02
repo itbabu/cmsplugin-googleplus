@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from cms.api import create_page, add_plugin
 from cms.models import CMSPlugin
 

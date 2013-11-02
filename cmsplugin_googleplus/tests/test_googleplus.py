@@ -1,6 +1,6 @@
-from httplib2 import Response
-from datetime import datetime
+from __future__ import unicode_literals
 
+from httplib2 import Response
 from django.test.utils import override_settings
 from django.test import TestCase
 from mock import patch, Mock
