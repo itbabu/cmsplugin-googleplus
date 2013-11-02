@@ -21,5 +21,9 @@ script:
     - coverage run ./runtests.py
     - coverage report
 
+branches:
+  only:
+    - master
+
 after_success:
     - coveralls
