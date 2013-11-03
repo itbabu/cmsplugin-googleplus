@@ -4,10 +4,24 @@ cmsplugin-googleplus
 Django-cms plugin for fetching Google+ activities.
 You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>`_ at the bottom of this README.
 
+
+
+**Status**
+
 Still in Beta.
 
-Continuous Integration
-----------------------
+.. image:: https://pypip.in/v/cmsplugin-googleplus/badge.png
+        :target: https://crate.io/packages/cmsplugin-googleplus
+
+.. image:: https://pypip.in/d/cmsplugin-googleplus/badge.png
+        :target: https://crate.io/packages/cmsplugin-googleplus
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/itbabu/cmsplugin-googleplus/trend.png
+        :target: https://bitdeli.com/free
+
+
+**Continuous Integration**
+
 
 .. image:: https://secure.travis-ci.org/itbabu/cmsplugin-googleplus.png?branch=master
     :target: http://travis-ci.org/#!/itbabu/cmsplugin-googleplus?branch=master
