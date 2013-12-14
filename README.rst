@@ -36,7 +36,9 @@ Install
 
 1. Install these packages and their requirements:
 
-* `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
+**NOTE**: Django 1.6.x is supported only with Django-cms 3.x
+
+* `Django==1.4 <https://pypi.python.org/pypi/Django>`_
 * `django-cms>=2.4 <https://pypi.python.org/pypi/django-cms>`_
 * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
 * `python-dateutil - 2.1 <https://pypi.python.org/pypi/python-dateutil>`_
@@ -126,7 +128,7 @@ Requirements
 ^^^^^^^^^^^^
 * `mock - 1.0.1 <https://pypi.python.org/pypi/mock>`_
 * `django-nose - 1.2 <https://pypi.python.org/pypi/django-nose>`_
-* `coverage - 3.6 <https://pypi.python.org/pypi/coverage>`_
+* `coverage - 3.7 <https://pypi.python.org/pypi/coverage>`_
 
 Run the test with coverage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
