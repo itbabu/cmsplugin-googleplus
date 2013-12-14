@@ -13,6 +13,10 @@ def configure():
             os.path.dirname(os.path.realpath(__file__)), 'cmsplugin_googleplus', 'tests', 'example_project', x)
 
         test_settings = {
+            'LANGUAGE_CODE': 'en',
+            'LANGUAGES': (
+                ('en', 'English'),
+            ),
             'DATABASES': {
                 'default': {
                     'ENGINE': 'django.db.backends.sqlite3',
@@ -34,7 +38,6 @@ def configure():
                 'cms.plugins.picture',
                 'cms.plugins.snippet',
                 'cms.plugins.teaser',
-                'djangocms_text_ckeditor',
                 'cms.plugins.video',
                 'cms',
                 'mptt',
