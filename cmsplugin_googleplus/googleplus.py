@@ -73,7 +73,7 @@ class GooglePlusAPI(object):
             the actual number returned might be less than the specified results.
             To keep the application simple acceptable values are 1 to 20, inclusive. Default is 10.
 
-        :type query: str
+        :type query: unicode
         :type preferred_language: str
         :type order_by: str
         :type results: unsigned integer
