@@ -50,7 +50,7 @@ Configure
 ---------
 
 1. `Configure django-cms <http://django-cms.readthedocs.org/en/latest/getting_started/tutorial.html#configuration-and-setup>`_
-2. Add ``cmsplugin_googleplus`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
+2. Add ``cmsplugin_googleplus`` and ``'django.contrib.humanize'`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
 3. Go to the `google apis console <https://code.google.com/apis/console>`_ and create a new project (a google account is required)
 4. Select *Services* and activate *Google+ API*
 5. Select *API Access* and get the *API key*
@@ -135,6 +135,20 @@ Run the test with coverage
 ::
 
     $ coverage run runtests.py && coverage report -m
+
+
+Example Plugin Template
+-----------------------
+
+This template needs bootstrap framework. So you should add it to your base template.
+
+As quickstart you can use a CDN:
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 
 Preview
