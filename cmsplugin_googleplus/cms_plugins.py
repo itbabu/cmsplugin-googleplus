@@ -18,6 +18,7 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
     """
     model = GooglePlusActivities
     name = _("Google Plus Activity Feed")
+    render_template = False
     fieldsets = (
         (_('Layout'), {
             'fields': ('render_template', 'items', 'truncate_chars')

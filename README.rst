@@ -5,30 +5,29 @@ Django-cms plugin for fetching Google+ activities.
 You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>`_ at the bottom of this README.
 
 
-
 **Status**
 
 Still in Beta.
 
 .. image:: https://pypip.in/v/cmsplugin-googleplus/badge.png
-        :target: https://crate.io/packages/cmsplugin-googleplus
+        :target: https://crate.io/packages/cmsplugin-googleplus/
 
 .. image:: https://pypip.in/d/cmsplugin-googleplus/badge.png
-        :target: https://crate.io/packages/cmsplugin-googleplus
+        :target: https://crate.io/packages/cmsplugin-googleplus/
 
-.. image:: https://d2weczhvl823v0.cloudfront.net/itbabu/cmsplugin-googleplus/trend.png
-        :target: https://bitdeli.com/free
+.. image:: https://pypip.in/license/django-cms/badge.svg
+        :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
 
 
 **Continuous Integration**
 
 
-.. image:: https://secure.travis-ci.org/itbabu/cmsplugin-googleplus.png?branch=master
-    :target: http://travis-ci.org/#!/itbabu/cmsplugin-googleplus?branch=master
+.. image:: https://travis-ci.org/itbabu/cmsplugin-googleplus.svg?branch=master
+        :target: https://travis-ci.org/itbabu/cmsplugin-googleplus
 
-.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.png?branch=master
-    :alt: Coverage
-    :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
+.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.svg?branch=master
+        :alt: Coverage
+        :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
 
 
 Install
@@ -50,7 +49,7 @@ Configure
 ---------
 
 1. `Configure django-cms <http://django-cms.readthedocs.org/en/latest/getting_started/tutorial.html#configuration-and-setup>`_
-2. Add ``cmsplugin_googleplus`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
+2. Add ``cmsplugin_googleplus`` and ``'django.contrib.humanize'`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
 3. Go to the `google apis console <https://code.google.com/apis/console>`_ and create a new project (a google account is required)
 4. Select *Services* and activate *Google+ API*
 5. Select *API Access* and get the *API key*
@@ -135,6 +134,22 @@ Run the test with coverage
 ::
 
     $ coverage run runtests.py && coverage report -m
+
+
+Example Plugin Template
+-----------------------
+
+This template needs bootstrap framework. So you should add it to your base template.
+
+As quickstart you can use a CDN for the related css::
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+and the related javascript::
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 
 Preview

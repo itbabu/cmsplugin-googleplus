@@ -1,5 +1,4 @@
 [run]
 source = cmsplugin_googleplus
 omit =
-    *migrations*
     cmsplugin_googleplus/tests/*

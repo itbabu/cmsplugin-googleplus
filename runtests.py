@@ -31,14 +31,7 @@ def configure():
                 'django.contrib.messages',
                 'django.contrib.staticfiles',
                 'django.contrib.humanize',
-                'cms.plugins.file',
-                'cms.plugins.flash',
-                'cms.plugins.googlemap',
-                'cms.plugins.link',
-                'cms.plugins.picture',
-                'cms.plugins.snippet',
-                'cms.plugins.teaser',
-                'cms.plugins.video',
+                'south',
                 'cms',
                 'mptt',
                 'menus',
@@ -53,7 +46,7 @@ def configure():
                 'django.core.context_processors.request',
                 'django.core.context_processors.media',
                 'django.core.context_processors.static',
-                'cms.context_processors.media',
+                'cms.context_processors.cms_settings',
                 'sekizai.context_processors.sekizai',
             ),
             'TEMPLATE_DIRS': (
@@ -90,6 +83,14 @@ def run_tests(*test_args):
     test_runner = NoseTestSuiteRunner()
     if not test_args:
         test_args = ['cmsplugin_googleplus']
+    from south.management.commands import syncdb, migrate
+    if migrate:
+        syncdb.Command().handle_noargs(interactive=False, verbosity=1, database='default')
+        migrate.Command().handle(interactive=False, verbosity=1)
+    else:
+        syncdb.Command().handle_noargs(
+            interactive=False, verbosity=1, database='default', migrate=False, migrate_all=True)
+        migrate.Command().handle(interactive=False, verbosity=1, fake=True)
     num_failures = test_runner.run_tests(test_args)
     if num_failures:
         sys.exit(num_failures)
