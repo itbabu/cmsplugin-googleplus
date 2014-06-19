@@ -5,30 +5,29 @@ Django-cms plugin for fetching Google+ activities.
 You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>`_ at the bottom of this README.
 
 
-
 **Status**
 
 Still in Beta.
 
 .. image:: https://pypip.in/v/cmsplugin-googleplus/badge.png
-        :target: https://crate.io/packages/cmsplugin-googleplus
+        :target: https://crate.io/packages/cmsplugin-googleplus/
 
 .. image:: https://pypip.in/d/cmsplugin-googleplus/badge.png
-        :target: https://crate.io/packages/cmsplugin-googleplus
+        :target: https://crate.io/packages/cmsplugin-googleplus/
 
-.. image:: https://d2weczhvl823v0.cloudfront.net/itbabu/cmsplugin-googleplus/trend.png
-        :target: https://bitdeli.com/free
+.. image:: https://pypip.in/license/django-cms/badge.svg
+        :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
 
 
 **Continuous Integration**
 
 
-.. image:: https://secure.travis-ci.org/itbabu/cmsplugin-googleplus.png?branch=master
-    :target: http://travis-ci.org/#!/itbabu/cmsplugin-googleplus?branch=master
+.. image:: https://travis-ci.org/itbabu/cmsplugin-googleplus.svg?branch=master
+        :target: https://travis-ci.org/itbabu/cmsplugin-googleplus
 
-.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.png?branch=master
-    :alt: Coverage
-    :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
+.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.svg?branch=master
+        :alt: Coverage
+        :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
 
 
 Install
@@ -142,10 +141,12 @@ Example Plugin Template
 
 This template needs bootstrap framework. So you should add it to your base template.
 
-As quickstart you can use a CDN:
+As quickstart you can use a CDN for the related css::
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+and the related javascript::
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

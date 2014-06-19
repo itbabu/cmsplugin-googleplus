@@ -9,7 +9,7 @@ env:
     - DJANGO=1.6 DJANGOCMS=3
 
 install:
-    - pip install -q -r "test_requirements/django-$DJANGO.txt" --use-mirrors
+    - pip install -q -r "test_requirements/django-$DJANGO.txt"
 
 script:
     - coverage run ./runtests.py
