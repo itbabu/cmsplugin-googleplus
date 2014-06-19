@@ -35,12 +35,11 @@ Install
 
 1. Install these packages and their requirements:
 
-    **NOTE**: Django 1.6.x is supported only with Django-cms 3.x
 
     * `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
-    * `django-cms>=2.4 <https://pypi.python.org/pypi/django-cms>`_
+    * `django-cms>=3.0.2 <https://pypi.python.org/pypi/django-cms>`_
     * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
-    * `python-dateutil - 2.1 <https://pypi.python.org/pypi/python-dateutil>`_
+    * `python-dateutil - 2.2 <https://pypi.python.org/pypi/python-dateutil>`_
 
 
 2. Install `cmsplugin-googleplus <https://github.com/itbabu/cmsplugin-googleplus>`_ in your environment.
@@ -86,14 +85,27 @@ You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a c
 from one user or you can list a collection of activities
 as result of a `search <https://developers.google.com/+/api/latest/activities/search>`_.
 
-Template
---------
+Example Template
+----------------
 
 This plugin has an example template that uses `Twitter Bootstrap 3 <http://getbootstrap.com/>`_.
-You can use it as skeleton for you templates.
+You can use it as example skeleton for you templates.
+
+As quickstart you can use a CDN for the related css::
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+and the related javascript::
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+Custom Template
+---------------
 
 Create your template and inside ``settings.py`` add::
-
 
     GOOGLEPLUS_PLUGIN_TEMPLATES = (
         ('cmsplugin_googleplus/twitter_bootstrap.html',
@@ -134,23 +146,6 @@ Run the test with coverage
 ::
 
     $ coverage run runtests.py && coverage report -m
-
-
-Example Plugin Template
------------------------
-
-This template needs bootstrap framework. So you should add it to your base template.
-
-As quickstart you can use a CDN for the related css::
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-
-and the related javascript::
-
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
 
 Preview
 -------
