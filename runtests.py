@@ -83,6 +83,14 @@ def run_tests(*test_args):
     test_runner = NoseTestSuiteRunner()
     if not test_args:
         test_args = ['cmsplugin_googleplus']
+    from south.management.commands import syncdb, migrate
+    if migrate:
+        syncdb.Command().handle_noargs(interactive=False, verbosity=1, database='default')
+        migrate.Command().handle(interactive=False, verbosity=1)
+    else:
+        syncdb.Command().handle_noargs(
+            interactive=False, verbosity=1, database='default', migrate=False, migrate_all=True)
+        migrate.Command().handle(interactive=False, verbosity=1, fake=True)
     num_failures = test_runner.run_tests(test_args)
     if num_failures:
         sys.exit(num_failures)
