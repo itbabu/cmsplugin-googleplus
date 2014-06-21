@@ -15,9 +15,11 @@ Still in Beta.
 .. image:: https://pypip.in/d/cmsplugin-googleplus/badge.png
         :target: https://crate.io/packages/cmsplugin-googleplus/
 
-.. image:: https://pypip.in/license/django-cms/badge.svg
+.. image:: https://pypip.in/license/cmsplugin-googleplus/badge.svg
         :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
 
+.. image:: https://pypip.in/wheel/cmsplugin-googleplus/badge.svg
+        :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
 
 **Continuous Integration**
 
@@ -25,7 +27,7 @@ Still in Beta.
 .. image:: https://travis-ci.org/itbabu/cmsplugin-googleplus.svg?branch=master
         :target: https://travis-ci.org/itbabu/cmsplugin-googleplus
 
-.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.svg?branch=master
+.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.png?branch=master
         :alt: Coverage
         :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
 
