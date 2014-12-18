@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='cmsplugin-googleplus',
-    version='0.4.1.dev0',
+    version='0.4.1.dev',
     include_package_data=True,
     license='MIT License',
     description='Django-CMS plugin for Google Plus Activities',
@@ -31,11 +31,11 @@ setup(
     ],
     install_requires=[
         'google-api-python-client>=1.2',
-        'python-dateutil>=2.2'
+        'python-dateutil>=2.3'
     ],
     tests_require=[
         'mock>=1.0.1',
-        'django-nose>=1.2'
+        'django-nose>=1.3'
     ],
     packages=find_packages()
 )

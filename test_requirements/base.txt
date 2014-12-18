@@ -1,15 +1,15 @@
 mock>=1.0.1
-django-nose>=1.2
-coverage>=3.7
-coveralls>=0.3
-south==0.8.4
+django-nose==1.3
+coverage==3.7.1
+coveralls>=0.5
+south==1.0.1
 
 google-api-python-client>=1.2,<1.3
-python-dateutil>=2.1
-Pillow>=2.2.1
-django-classy-tags>=0.4
-html5lib>=0.99
-django-mptt>=0.6.0
+python-dateutil==2.3
+Pillow==2.6.1
+django-classy-tags>=0.5.2
+html5lib==0.999
+django-mptt==0.6.1
 django-sekizai>=0.7
-argparse
-djangocms-admin-style
+argparse==1.3.0
+djangocms-admin-style==0.2.4
