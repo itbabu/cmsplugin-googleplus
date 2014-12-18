@@ -39,9 +39,9 @@ Install
 
 
     * `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
-    * `django-cms>=3.0.2 <https://pypi.python.org/pypi/django-cms>`_
+    * `django-cms>=3.0.7 <https://pypi.python.org/pypi/django-cms>`_
     * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
-    * `python-dateutil - 2.2 <https://pypi.python.org/pypi/python-dateutil>`_
+    * `python-dateutil - 2.3 <https://pypi.python.org/pypi/python-dateutil>`_
 
 
 2. Install `cmsplugin-googleplus <https://github.com/itbabu/cmsplugin-googleplus>`_ in your environment.
@@ -91,12 +91,12 @@ Example Template
 ----------------
 
 This plugin has an example template that uses `Twitter Bootstrap 3 <http://getbootstrap.com/>`_.
-You can use it as example skeleton for you templates.
+You can use it as example skeleton for your templates.
 
 As quickstart you can use a CDN for the related css::
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 and the related javascript::
 
