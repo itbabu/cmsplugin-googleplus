@@ -5,7 +5,6 @@ python:
 
 env:
     - DJANGO=1.4 DJANGOCMS=3
-    - DJANGO=1.5 DJANGOCMS=3
     - DJANGO=1.6 DJANGOCMS=3
 
 install:
