@@ -53,9 +53,13 @@ Configure
 
 1. `Configure django-cms <http://django-cms.readthedocs.org/en/latest/getting_started/tutorial.html#configuration-and-setup>`_
 2. Add ``cmsplugin_googleplus`` and ``'django.contrib.humanize'`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
-3. Go to the `google apis console <https://code.google.com/apis/console>`_ and create a new project (a google account is required)
-4. Select *Services* and activate *Google+ API*
-5. Select *API Access* and get the *API key*
+3. Go to the `google apis console <https://console.developers.google.com/project>`_ and create a new project
+or select an existent one (a google account is required)
+4. Select *APIs* under *APIs & Auth* and activate *Google+ API*
+
+.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/google-developers-console.png
+
+5. Select *Credentials* and *Create new Key* (Browser key)
 6. Add the *API key* to your ``settings.py``::
 
         GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = '<your_api_key>'
@@ -63,9 +67,18 @@ Configure
 Run
 ---
 
-Fresh install
-^^^^^^^^^^^^^
+Django 1.7
+^^^^^^^^^^
 
+::
+
+    python manage.py migrate
+
+Django 1.4 and Django 1.6
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Fresh install
+'''''''''''''
 ::
 
     python manage.py syncdb --all
@@ -74,11 +87,12 @@ Fresh install
 The first command will prompt you to create a super user. Choose ‘yes’ and enter appropriate values.
 
 Upgrade
-^^^^^^^
+'''''''
 ::
 
     python manage.py syncdb
     python manage.py migrate
+
 
 
 How to use it
@@ -97,13 +111,13 @@ You can use it as example skeleton for your templates.
 
 As quickstart you can use a CDN for the related css::
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 and the related javascript::
 
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 
 Custom Template
