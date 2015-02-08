@@ -14,7 +14,7 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 
 def data_from_file(filename):
     path = os.path.join(DATA_DIR, filename)
-    f = file(path, 'r')
+    f = open(path, 'r')
     data = f.read()
     f.close()
     return json.loads(data)

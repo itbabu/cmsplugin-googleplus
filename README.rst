@@ -7,7 +7,7 @@ You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>
 
 **Status**
 
-Still in Beta.
+Beta.
 
 .. image:: https://pypip.in/v/cmsplugin-googleplus/badge.png
         :target: https://crate.io/packages/cmsplugin-googleplus/
@@ -35,12 +35,14 @@ Still in Beta.
 Install
 -------
 
+This package supports Python 2.7, Python 3.3 and Python 3.4
+
 1. Install these packages and their requirements:
 
 
     * `Django>=1.4 <https://pypi.python.org/pypi/Django>`_
-    * `django-cms>=3.0.7 <https://pypi.python.org/pypi/django-cms>`_
-    * `google-api-python-client - 1.2 <https://pypi.python.org/pypi/google-api-python-client>`_
+    * `django-cms>=3.0.9 <https://pypi.python.org/pypi/django-cms>`_
+    * `google-api-python-client - 1.3.1 <https://pypi.python.org/pypi/google-api-python-client>`_
     * `python-dateutil - 2.3 <https://pypi.python.org/pypi/python-dateutil>`_
 
 

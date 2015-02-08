@@ -25,11 +25,13 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
-        'google-api-python-client>=1.2',
+        'google-api-python-client>=1.3.1',
         'python-dateutil>=2.3'
     ],
     tests_require=[
