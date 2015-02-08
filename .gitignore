@@ -1,8 +1,29 @@
-*.log
-*.pot
-*.pyc
 local_settings.py
-.coverage
-nosetests.xml
 
-.tox
+# Packaging
+*.pyc
+*.egg-info
+/dist/
+/build/
+
+# Temporary/OS files
+*.swp
+*.swo
+*.*~
+.~lock.*
+*.DS_Store
+
+# IDE files
+.project
+.pydevproject
+.settings
+.idea
+
+# Test files
+.coverage
+.noseids
+coverage.xml
+violations.txt
+nosetests.xml
+/htmlcov/*
+/.tox/*
