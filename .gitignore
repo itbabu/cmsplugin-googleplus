@@ -4,7 +4,7 @@ local_settings.py
 *.pyc
 *.egg-info
 /dist/
-/build/
+/docs/build/
 
 # Temporary/OS files
 *.swp
