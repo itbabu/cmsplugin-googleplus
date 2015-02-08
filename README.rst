@@ -56,8 +56,7 @@ Configure
 3. Go to the `google apis console <https://console.developers.google.com/project>`_ and create a new project or select an existent one (a google account is required)
 4. Select *APIs* under *APIs & Auth* and activate *Google+ API*
 
-.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/google-developers-console.png
-
+.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/docs/images/google-developers-console.png
 5. Select *Credentials* and *Create new Key* (Browser key)
 6. Add the *API key* to your ``settings.py``::
 
@@ -177,7 +176,7 @@ Preview
 
 This is how the plugin looks with the example template.
 
-.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/cmsplugin-googleplus-preview.png
+.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/docs/images/cmsplugin-googleplus-preview.png
 
 
 Have Fun!
