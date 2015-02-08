@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 import os
 import sys
 
+import django
 from django.conf import settings
 
 
@@ -24,14 +25,13 @@ def configure():
                 },
             },
             'INSTALLED_APPS': [
-            'django.contrib.auth',
+                'django.contrib.auth',
                 'django.contrib.contenttypes',
                 'django.contrib.sessions',
                 'django.contrib.sites',
                 'django.contrib.messages',
                 'django.contrib.staticfiles',
                 'django.contrib.humanize',
-                'south',
                 'cms',
                 'mptt',
                 'menus',
@@ -74,26 +74,39 @@ def configure():
             'APPEND_SLASH': True,
             'CMS_TEMPLATES': (('nav_playground.html', 'Test Template'),)
         }
-
+        if django.VERSION < (1, 7, 0):
+            test_settings['INSTALLED_APPS'].append('south')
+        else:
+            test_settings['MIGRATION_MODULES'] = {
+                'cms': 'cms.migrations_django',
+                'menus': 'menus.migrations_django'}
         settings.configure(**test_settings)
 
 
 def run_tests(*test_args):
-    from django_nose import NoseTestSuiteRunner
-    test_runner = NoseTestSuiteRunner()
     if not test_args:
         test_args = ['cmsplugin_googleplus']
-    from south.management.commands import syncdb, migrate
-    if migrate:
-        syncdb.Command().handle_noargs(interactive=False, verbosity=1, database='default')
-        migrate.Command().handle(interactive=False, verbosity=1)
+
+    if django.VERSION >= (1, 7, 0):
+        # see: https://docs.djangoproject.com/en/dev/releases/1.7/#standalone-scripts
+        django.setup()
+        from django.core.management import call_command
+        call_command("makemigrations", "cmsplugin_googleplus", database='default')
+        call_command("migrate", database='default')
     else:
-        syncdb.Command().handle_noargs(
-            interactive=False, verbosity=1, database='default', migrate=False, migrate_all=True)
-        migrate.Command().handle(interactive=False, verbosity=1, fake=True)
-    num_failures = test_runner.run_tests(test_args)
-    if num_failures:
-        sys.exit(num_failures)
+        from south.management.commands import syncdb, migrate
+        if migrate:
+            syncdb.Command().handle_noargs(interactive=False, verbosity=1, database='default')
+            migrate.Command().handle(interactive=False, verbosity=1)
+        else:
+            syncdb.Command().handle_noargs(
+                interactive=False, verbosity=1, database='default', migrate=False, migrate_all=True)
+            migrate.Command().handle(interactive=False, verbosity=1, fake=True)
+
+    from django_nose import NoseTestSuiteRunner
+    failures = NoseTestSuiteRunner().run_tests(test_args)
+    if failures:  # pragma: no cover
+        sys.exit(failures)
 
 
 if __name__ == '__main__':

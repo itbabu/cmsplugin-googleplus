@@ -9,6 +9,7 @@ python:
 env:
     - DJANGO=1.4 DJANGOCMS=3
     - DJANGO=1.6 DJANGOCMS=3
+    - DJANGO=1.7 DJANGOCMS=3
 
 install:
     - pip install -q -r "test_requirements/django-$DJANGO.txt"
