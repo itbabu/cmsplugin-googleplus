@@ -20,17 +20,6 @@ Status
 
 Beta.
 
-.. image:: https://pypip.in/v/cmsplugin-googleplus/badge.png
-        :target: https://crate.io/packages/cmsplugin-googleplus/
-
-.. image:: https://pypip.in/d/cmsplugin-googleplus/badge.png
-        :target: https://crate.io/packages/cmsplugin-googleplus/
-
-.. image:: https://pypip.in/license/cmsplugin-googleplus/badge.svg
-        :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
-
-.. image:: https://pypip.in/wheel/cmsplugin-googleplus/badge.svg
-        :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
 
 Continuous Integration
 ----------------------
@@ -64,7 +53,7 @@ Preview
 
 This is how the plugin looks with the example template.
 
-.. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/cmsplugin-googleplus-preview.png
+.. image:: ../images/cmsplugin-googleplus-preview.png
 
 
 Have Fun!
