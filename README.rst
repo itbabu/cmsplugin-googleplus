@@ -51,10 +51,9 @@ This package supports Python 2.7, Python 3.3 and Python 3.4
 Configure
 ---------
 
-1. `Configure django-cms <http://django-cms.readthedocs.org/en/latest/getting_started/tutorial.html#configuration-and-setup>`_
+1. `Configure django-cms <http://django-cms.readthedocs.org/en/latest/how_to/integrate.html>`_
 2. Add ``cmsplugin_googleplus`` and ``'django.contrib.humanize'`` to the ``INSTALLED_APPS`` list in your project's ``settings.py``.
-3. Go to the `google apis console <https://console.developers.google.com/project>`_ and create a new project
-or select an existent one (a google account is required)
+3. Go to the `google apis console <https://console.developers.google.com/project>`_ and create a new project or select an existent one (a google account is required)
 4. Select *APIs* under *APIs & Auth* and activate *Google+ API*
 
 .. image:: https://raw.github.com/itbabu/cmsplugin-googleplus/master/cmsplugin_googleplus/docs/images/google-developers-console.png
