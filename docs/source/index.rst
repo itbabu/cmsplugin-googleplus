@@ -13,25 +13,44 @@ You can `list <https://developers.google.com/+/api/latest/activities/list>`_ a c
 from one user or you can list a collection of activities
 as result of a `search <https://developers.google.com/+/api/latest/activities/search>`_.
 
---------
 
-Status
-------
+Info
+----
 
-Beta.
+.. image:: https://pypip.in/status/cmsplugin-googleplus/badge.svg
+    :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
+    :alt: Development Status: Beta
 
+.. image:: https://img.shields.io/pypi/v/cmsplugin-googleplus.svg?style=plastic
+    :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/cmsplugin-googleplus.svg?style=plastic
+    :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
+    :alt: Downloads
+
+.. image:: https://img.shields.io/pypi/l/cmsplugin-googleplus.svg?style=plastic
+    :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
+    :alt: License
+
+.. image:: https://pypip.in/wheel/cmsplugin-googleplus/badge.svg
+    :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
+    :alt: Wheel Status
+
+|
 
 Continuous Integration
 ----------------------
 
-.. image:: https://travis-ci.org/itbabu/cmsplugin-googleplus.svg?branch=master
-        :target: https://travis-ci.org/itbabu/cmsplugin-googleplus
+.. image:: https://img.shields.io/travis/itbabu/cmsplugin-googleplus/master.svg?style=plastic
+    :target: https://travis-ci.org/itbabu/cmsplugin-googleplus/
+    :alt: Build Status
 
-.. image:: https://coveralls.io/repos/itbabu/cmsplugin-googleplus/badge.png?branch=master
-        :alt: Coverage
-        :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
+.. image:: https://img.shields.io/coveralls/itbabu/cmsplugin-googleplus/master.svg?style=plastic
+    :alt: Coverage Status
+    :target: https://coveralls.io/r/itbabu/cmsplugin-googleplus?branch=master
 
---------
+|
 
 Contents
 --------
@@ -46,7 +65,6 @@ Contents
    tests
    translations
 
---------
 
 Preview
 -------
