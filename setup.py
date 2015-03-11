@@ -31,8 +31,8 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
-        'google-api-python-client>=1.3.1',
-        'python-dateutil>=2.3'
+        'google-api-python-client>=1.4.0',
+        'python-dateutil>=2.4.1'
     ],
     tests_require=[
         'mock>=1.0.1',

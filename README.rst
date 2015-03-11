@@ -27,6 +27,10 @@ Info
     :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
     :alt: Wheel Status
 
+.. image:: https://pypip.in/py_versions/cmsplugin-googleplus/badge.svg
+   :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
+    :alt: Supported Python Versions
+
 |
 
 Continuous Integration
