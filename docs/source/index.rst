@@ -39,7 +39,7 @@ Info
 
 .. image:: https://pypip.in/py_versions/cmsplugin-googleplus/badge.svg
     :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
-    :alt: Python Versions
+    :alt: Supported Python Versions
 
 |
 
