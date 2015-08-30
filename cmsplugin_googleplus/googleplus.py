@@ -3,8 +3,8 @@ import logging
 
 from django.conf import settings
 
-from apiclient.discovery import build
-from apiclient.errors import HttpError
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 
 logger = logging.getLogger(__name__)
 

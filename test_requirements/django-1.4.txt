@@ -1,3 +1,0 @@
--r base.txt
-Django==1.4.19
-South==1.0.2

@@ -3,6 +3,7 @@ import os
 import json
 
 from django.test import TestCase
+from googleapiclient.http import HttpMock
 from mock import patch, Mock
 
 
@@ -23,7 +24,7 @@ def data_from_file(filename):
 class BaseGooglePlusTestCase(TestCase):
     def setUp(self):
         super(BaseGooglePlusTestCase, self).setUp()
-        #TODO: improve this. apiclient.http.HttpMock should be used as argument in apiclient.http.HttpRequest.execute.
+        # TODO: improve this. apiclient.http.HttpMock should be used as argument in apiclient.http.HttpRequest.execute.
         mock = Mock()
         mock.configure_mock(**{
             "activities.return_value.list.return_value.execute.return_value": data_from_file('activities.json'),

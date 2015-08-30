@@ -4,7 +4,7 @@ from httplib2 import Response
 from django.test.utils import override_settings
 from django.test import TestCase
 from mock import patch, Mock
-from apiclient.errors import HttpError
+from googleapiclient.errors import HttpError
 
 from .base import TEST_DEVELOPER_KEY, BaseGooglePlusTestCase
 from ..googleplus import GooglePlusAPI
@@ -37,9 +37,9 @@ class GooglePlusAPITestCase(BaseGooglePlusTestCase):
 
 class GooglePlusAPITestCaseWithErrors(TestCase):
 
-    error_content = '{\n "error": {\n  "errors": [\n   {\n    "domain": "usageLimits",\n' \
-                    '"reason": "keyInvalid",\n    "message": "Bad Request"\n   }\n  ],\n' \
-                    '"code": 400,\n  "message": "Bad Request"\n }\n}\n'
+    error_content = b'{\n "error": {\n  "errors": [\n   {\n    "domain": "usageLimits",\n' \
+                    b'"reason": "keyInvalid",\n    "message": "Bad Request"\n   }\n  ],\n' \
+                    b'"code": 400,\n  "message": "Bad Request"\n }\n}\n'
     error_resp_dict = {'status': '400', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff',
                        'transfer-encoding': 'chunked', 'expires': 'Sun, 18 Aug 2013 07:25:24 GMT', 'server': 'GSE',
                        'cache-control': 'private, max-age=0', 'date': 'Sun, 18 Aug 2013 07:25:24 GMT',
