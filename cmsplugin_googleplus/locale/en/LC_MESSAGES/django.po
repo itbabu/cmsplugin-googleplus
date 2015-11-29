@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-29 16:20+0100\n"
+"POT-Creation-Date: 2015-11-29 17:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,28 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cms_plugins.py:20
+#: cms_plugins.py:19
 msgid "Google Plus Activity Feed"
 msgstr ""
 
-#: cms_plugins.py:23
+#: cms_plugins.py:22
+msgid "Settings"
+msgstr ""
+
+#: cms_plugins.py:25
 msgid "Layout"
 msgstr ""
 
-#: cms_plugins.py:26
+#: cms_plugins.py:28
 msgid "Activity List"
 msgstr ""
 
-#: cms_plugins.py:27
+#: cms_plugins.py:29
 msgid ""
 "List of the activities in the specified collection for a particular user."
 msgstr ""
 
-#: cms_plugins.py:31
+#: cms_plugins.py:33
 msgid "Activity Search"
 msgstr ""
 
-#: cms_plugins.py:32
+#: cms_plugins.py:34
 msgid ""
 "Search public activities. These fields are ignored if the \"Google+ User Id"
 "\" is filled."
@@ -300,61 +304,75 @@ msgstr ""
 msgid "recent"
 msgstr ""
 
-#: models.py:20
+#: models.py:21
 msgid "template"
 msgstr ""
 
-#: models.py:22
+#: models.py:23
 msgid "item"
 msgstr ""
 
-#: models.py:24
+#: models.py:25
 msgid ""
 "Number of Google Plus activities to return. From 1 to 100. Default is 10."
 msgstr ""
 
-#: models.py:27
+#: models.py:28
 msgid "truncate chars"
 msgstr ""
 
-#: models.py:28
+#: models.py:29
 msgid ""
 "Truncates the content, annotation and attachment after a certain number of "
 "characters."
 msgstr ""
 
-#: models.py:31
+#: models.py:32
 msgid "Google+ User Id"
 msgstr ""
 
-#: models.py:32
+#: models.py:33
 msgid "The ID of the user to get activities for"
 msgstr ""
 
-#: models.py:35
+#: models.py:36
 msgid "search query"
 msgstr ""
 
-#: models.py:36
+#: models.py:37
 msgid "Full-text search query string."
 msgstr ""
 
-#: models.py:38
+#: models.py:39
 msgid "preferred language"
 msgstr ""
 
-#: models.py:40
+#: models.py:41
 msgid "Optional. Specify the preferred language to search with."
 msgstr ""
 
-#: models.py:45
+#: models.py:44
+msgid "order by"
+msgstr ""
+
+#: models.py:47
 msgid ""
 "Optional. Specifies how to order search results. 'best': Sort activities by "
 "relevance to the user, most relevant first, 'recent': Sort activities by "
 "published date, most recent first."
 msgstr ""
 
-#: models.py:57
+#: models.py:52
+msgid "Google API key"
+msgstr ""
+
+#: models.py:53
+msgid ""
+"To use the Google+ API, you must register your project on the Google "
+"Developers Console and get a Google API key."
+msgstr ""
+
+#: models.py:73
 msgid "\"Google+ user id\" or \"Search query\" must be provided"
 msgstr ""
 

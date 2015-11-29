@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from cms.models.pluginmodel import CMSPlugin
+from django.core.cache import cache
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
@@ -40,18 +41,41 @@ class GooglePlusActivities(CMSPlugin):
         help_text=_('Optional. Specify the preferred language to search with.')
     )
     order_by = models.CharField(
+        _('order by'),
         max_length=20, choices=GOOGLEPLUS_PLUGIN_ORDER_BY_CHOICES,
         default=RECENT, blank=True,
         help_text=_("Optional. Specifies how to order search results. 'best': "
                     "Sort activities by relevance to the user, most relevant "
                     "first, 'recent': Sort activities by published date, most "
                     "recent first."))
+    google_api_key = models.CharField(
+        _('Google API key'),
+        help_text=_('To use the Google+ API, you must register your project '
+                    'on the Google Developers Console and get a Google '
+                    'API key.'),
+        max_length=75)
 
     def __unicode__(self):
         return ('Google User id: %s' % self.google_user) \
             if self.google_user else ('Search Query: %s' % self.query)
 
+    def save(self, *args, **kwargs):
+        """
+        Save and invalidate cached activities
+        """
+        super(GooglePlusActivities, self).save(*args, **kwargs)
+        key = self.get_cache_key()
+        cache.delete(key)
+
     def clean(self):
         if not self.google_user and not self.query:
             raise ValidationError(
                 _('"Google+ user id" or "Search query" must be provided'))
+
+    def get_cache_key(self, search=False):
+        if self.pk:
+            if self.google_user:
+                return 'google_plus_user_activities_%d' % self.pk
+            else:
+                return 'google_plus_search_activities_%d' % self.pk
+        return None

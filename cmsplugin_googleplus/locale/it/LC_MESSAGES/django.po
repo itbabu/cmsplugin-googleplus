@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cmsplugin-googleplus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-29 16:20+0100\n"
+"POT-Creation-Date: 2015-11-29 17:50+0100\n"
 "PO-Revision-Date: 2013-11-02 13:29+0000\n"
 "Last-Translator: Marco Badan <marco.badan@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/cmsplugin-"
@@ -19,30 +19,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: cms_plugins.py:20
+#: cms_plugins.py:19
 msgid "Google Plus Activity Feed"
 msgstr "Feed Attività di Google Plus"
 
-#: cms_plugins.py:23
+#: cms_plugins.py:22
+msgid "Settings"
+msgstr ""
+
+#: cms_plugins.py:25
 msgid "Layout"
 msgstr "Layout"
 
-#: cms_plugins.py:26
+#: cms_plugins.py:28
 msgid "Activity List"
 msgstr "Elenco Attività"
 
-#: cms_plugins.py:27
+#: cms_plugins.py:29
 msgid ""
 "List of the activities in the specified collection for a particular user."
 msgstr ""
 "Elenca tutte le attività presenti nella raccolta specificata per un "
 "determinato utente."
 
-#: cms_plugins.py:31
+#: cms_plugins.py:33
 msgid "Activity Search"
 msgstr "Ricerca Attività"
 
-#: cms_plugins.py:32
+#: cms_plugins.py:34
 msgid ""
 "Search public activities. These fields are ignored if the \"Google+ User Id"
 "\" is filled."
@@ -306,26 +310,26 @@ msgstr "più pertinente"
 msgid "recent"
 msgstr "più recente"
 
-#: models.py:20
+#: models.py:21
 msgid "template"
 msgstr "template"
 
-#: models.py:22
+#: models.py:23
 msgid "item"
 msgstr "elemento"
 
-#: models.py:24
+#: models.py:25
 msgid ""
 "Number of Google Plus activities to return. From 1 to 100. Default is 10."
 msgstr ""
 "Numero di Attività di Google Plus da mostrare. Da 1 a 100. 10 è il valore "
 "predefinito ."
 
-#: models.py:27
+#: models.py:28
 msgid "truncate chars"
 msgstr "tronca caratteri"
 
-#: models.py:28
+#: models.py:29
 msgid ""
 "Truncates the content, annotation and attachment after a certain number of "
 "characters."
@@ -333,31 +337,35 @@ msgstr ""
 "Tronca il contenuto, annotazione e allegato dopo un certo numero di "
 "caratteri."
 
-#: models.py:31
+#: models.py:32
 msgid "Google+ User Id"
 msgstr "Google+ User Id"
 
-#: models.py:32
+#: models.py:33
 msgid "The ID of the user to get activities for"
 msgstr "L'ID dell'utente per cui ottenere le attività."
 
-#: models.py:35
+#: models.py:36
 msgid "search query"
 msgstr "query di ricerca"
 
-#: models.py:36
+#: models.py:37
 msgid "Full-text search query string."
 msgstr "Stringa di testo completo della query di ricerca."
 
-#: models.py:38
+#: models.py:39
 msgid "preferred language"
 msgstr "lingua preferita"
 
-#: models.py:40
+#: models.py:41
 msgid "Optional. Specify the preferred language to search with."
 msgstr "Opzionale. Specifica la lingua preferita con cui fare la ricerca."
 
-#: models.py:45
+#: models.py:44
+msgid "order by"
+msgstr ""
+
+#: models.py:47
 msgid ""
 "Optional. Specifies how to order search results. 'best': Sort activities by "
 "relevance to the user, most relevant first, 'recent': Sort activities by "
@@ -368,7 +376,17 @@ msgstr ""
 "la più pertinente per prima, \"più\": ordina le attività in base alla data "
 "di pubblicazione, con la più recente per prima."
 
-#: models.py:57
+#: models.py:52
+msgid "Google API key"
+msgstr ""
+
+#: models.py:53
+msgid ""
+"To use the Google+ API, you must register your project on the Google "
+"Developers Console and get a Google API key."
+msgstr ""
+
+#: models.py:73
 msgid "\"Google+ user id\" or \"Search query\" must be provided"
 msgstr "Deve essere fornito lo \"Google+ user id\" o la \"Query di ricerca\""
 

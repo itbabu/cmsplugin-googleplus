@@ -64,7 +64,6 @@ Contents
 
    install
    configure
-   run
    templates
    tests
    translations

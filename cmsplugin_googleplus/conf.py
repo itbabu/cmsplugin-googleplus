@@ -8,8 +8,6 @@ DEFAULT_PLUGIN_TEMPLATES = (
      _('Example Template using Twitter Bootstrap')),
 )
 
-GOOGLEPLUS_PLUGIN_DEVELOPER_KEY = getattr(
-    settings, 'GOOGLEPLUS_PLUGIN_DEVELOPER_KEY', None)
 GOOGLEPLUS_PLUGIN_CACHE_DURATION = getattr(
     settings, 'GOOGLEPLUS_PLUGIN_CACHE_DURATION', 60*5)
 GOOGLEPLUS_PLUGIN_TEMPLATES = getattr(

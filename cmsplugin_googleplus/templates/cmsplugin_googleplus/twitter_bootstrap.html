@@ -38,7 +38,7 @@
                         <hr>
                     {% endif %}
                     {% if attachment.image.url %}
-                        <a href="{{ item.object.url }}">
+                        <a href="{{ item.object.url }}" target="_blank">
                             <img class="center-block img-responsive"
                                  src="{{ attachment.image.url }}">
                         </a>
@@ -51,7 +51,7 @@
                 {% if item.verb == "share" %}
 
                 <p class="text-muted" style="margin-top: 10px">
-                    <a href="{{ item.object.url }}" class="small">
+                    <a href="{{ item.object.url }}" class="small" target="_blank">
                         {% blocktrans with shared_by=item.object.actor.displayName %}
                         Originally shared by {{ shared_by }}
                         {% endblocktrans %}
@@ -66,7 +66,7 @@
 
                 <div>
                     <div class="text-muted pull-left round">
-                        <a href="{{ item.object.url }}" type="button"
+                        <a href="{{ item.object.url }}" target="_blank"
                            class="btn btn-default btn">
                             <strong>+1</strong>
                         </a>
@@ -77,14 +77,14 @@
 
                     </div>
                     <div class="text-muted pull-right">
-                        <a href="{{ item.object.url }}" type="button"
+                        <a href="{{ item.object.url }}" target="_blank"
                            class="btn btn-default">
                             <i class="glyphicon glyphicon-comment"></i>
                         </a>
                         {% if item.object.replies.totalItems != 0 %}
                         &nbsp;&nbsp;<strong>{{ item.object.replies.totalItems }}</strong>
                         {% endif %}
-                        <a href="{{ item.object.url }}" type="button"
+                        <a href="{{ item.object.url }}" target="_blank"
                            class="btn btn-default"
                            style="margin-left: 40px">
 

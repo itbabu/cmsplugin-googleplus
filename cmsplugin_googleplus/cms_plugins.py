@@ -6,8 +6,7 @@ from dateutil.parser import parse
 from django.core.cache import cache
 from django.utils.translation import ugettext_lazy as _
 
-from .conf import (
-    GOOGLEPLUS_PLUGIN_CACHE_DURATION, GOOGLEPLUS_PLUGIN_DEVELOPER_KEY)
+from .conf import GOOGLEPLUS_PLUGIN_CACHE_DURATION
 from .googleplus import GooglePlusAPI
 from .models import GooglePlusActivities
 
@@ -20,6 +19,9 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
     name = _("Google Plus Activity Feed")
     render_template = False
     fieldsets = (
+        (_('Settings'), {
+            'fields': ('google_api_key', )
+        }),
         (_('Layout'), {
             'fields': ('render_template', 'items', 'truncate_chars')
         }),
@@ -35,11 +37,6 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
             'fields': ('query', 'preferred_language', 'order_by')
         }),
     )
-
-    def __init__(self, *args, **kwargs):
-        super(GooglePlusActivitiesPlugin, self).__init__(*args, **kwargs)
-        self.googleplus_api = GooglePlusAPI(
-            developer_key=GOOGLEPLUS_PLUGIN_DEVELOPER_KEY)
 
     def render(self, context, instance, placeholder):
         context['instance'] = instance
@@ -63,20 +60,24 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
         <https://code.google.com/p/google-plus-platform/issues/detail?id=63>`_
 
         """
-        key_name = 'google_plus_user_activities_%d' % instance.pk
+        key_name = instance.get_cache_key(instance.pk)
         activity_list = cache.get(key_name, None)
         if not activity_list:
-            activity_list = self.googleplus_api.get_user_activity_list(
+            googleplus_api = GooglePlusAPI(
+                developer_key=instance.google_api_key)
+            activity_list = googleplus_api.get_user_activity_list(
                 user_id=instance.google_user, results=instance.items)
             cache.set(key_name, activity_list,
                       GOOGLEPLUS_PLUGIN_CACHE_DURATION)
         return activity_list
 
     def get_search_activities(self, instance):
-        key_name = 'google_plus_search_activities_%d' % instance.pk
+        key_name = instance.get_cache_key(instance.pk)
         activity_list = cache.get(key_name, None)
         if not activity_list:
-            activity_list = self.googleplus_api.get_search_activity_list(
+            googleplus_api = GooglePlusAPI(
+                developer_key=instance.google_api_key)
+            activity_list = googleplus_api.get_search_activity_list(
                 query=instance.query,
                 preferred_language=instance.preferred_language,
                 order_by=instance.order_by,
