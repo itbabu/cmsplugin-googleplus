@@ -1,5 +1,7 @@
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
+
 from cmsplugin_googleplus import __version__
 
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()

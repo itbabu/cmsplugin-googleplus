@@ -21,6 +21,7 @@ install:
 
 script:
   - coverage run ./runtests.py
+  - ./lint.sh
   - coverage report
 
 after_success:

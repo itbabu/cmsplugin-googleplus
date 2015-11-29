@@ -1,7 +1,9 @@
 from __future__ import unicode_literals
+
 from django.utils.translation import ugettext_lazy as _
 
-# The following language codes are available for search methods in people and activities resources
+# The following language codes are available for search methods in people
+# and activities resources
 # https://developers.google.com/+/api/search#available-languages
 AFRIKAANS = 'af'
 AMHARIC = 'am'
@@ -72,7 +74,7 @@ GOOGLEPLUS_PLUGIN_LANGUAGE_CHOICES = (
     (BASQUE, _('Basque')),
     (BENGALI, _('Bengali')),
     (BULGARIAN, _('Bulgarian')),
-    (CATALAN , _('Catalan')),
+    (CATALAN, _('Catalan')),
     (CHINESE_HONG_KONG, _('Chinese (Hong Kong)')),
     (CHINESE_SIMPLIFIED, _('Chinese (Simplified)')),
     (CHINESE_TRADITIONAL, _('Chinese (Traditional)')),

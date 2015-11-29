@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+
 import os
 import sys
 
@@ -22,7 +23,8 @@ def configure():
 
         # Helper function to extract absolute path
         location = lambda x: os.path.join(
-            os.path.dirname(os.path.realpath(__file__)), 'cmsplugin_googleplus', 'tests', 'example_project', x)
+            os.path.dirname(os.path.realpath(__file__)),
+                'cmsplugin_googleplus', 'tests', 'example_project', x)
 
         test_settings = {
             'LANGUAGE_CODE': 'en',
@@ -72,12 +74,14 @@ def configure():
             'CMS_TEMPLATES': (('nav_playground.html', 'Test Template'),)
         }
         if django.VERSION < (1, 8, 0):
-            test_settings['TEMPLATE_CONTEXT_PROCESSORS'] = TEMPLATE_CONTEXT_PROCESSORS
+            test_settings['TEMPLATE_CONTEXT_PROCESSORS'] = \
+                TEMPLATE_CONTEXT_PROCESSORS
             test_settings['TEMPLATE_DIRS'] = [location('templates'), ]
         else:
             test_settings['TEMPLATES'] = [
                 {
-                    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                    'BACKEND':
+                        'django.template.backends.django.DjangoTemplates',
                     'DIRS': [
                         location('templates'),
                     ],
@@ -95,7 +99,8 @@ def run_tests(*test_args):
     if not test_args:
         test_args = ['cmsplugin_googleplus']
 
-    # see: https://docs.djangoproject.com/en/dev/releases/1.7/#standalone-scripts
+    # see:
+    # https://docs.djangoproject.com/en/dev/releases/1.7/#standalone-scripts
     django.setup()
     from django.core.management import call_command
     call_command("makemigrations", "cmsplugin_googleplus", database='default')
