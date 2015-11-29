@@ -1,5 +1,6 @@
 import os
 from setuptools import setup, find_packages
+from cmsplugin_googleplus import __version__
 
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
@@ -8,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='cmsplugin-googleplus',
-    version='0.6.0-dev',
+    version=__version__,
     include_package_data=True,
     license='MIT License',
     description='Django-CMS plugin for Google Plus Activities',
@@ -31,12 +32,12 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
-        'google-api-python-client>=1.4.1',
+        'google-api-python-client>=1.4.2',
         'python-dateutil>=2.4.2'
     ],
     tests_require=[
         'mock>=1.3.0',
-        'django-nose>=1.4.1'
+        'django-nose>=1.4.2'
     ],
     packages=find_packages()
 )
