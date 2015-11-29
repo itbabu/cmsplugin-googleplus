@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 14:25+0100\n"
+"POT-Creation-Date: 2015-11-29 16:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,371 +21,351 @@ msgstr ""
 msgid "Google Plus Activity Feed"
 msgstr ""
 
-#: cms_plugins.py:22
+#: cms_plugins.py:23
 msgid "Layout"
 msgstr ""
 
-#: cms_plugins.py:25
+#: cms_plugins.py:26
 msgid "Activity List"
 msgstr ""
 
-#: cms_plugins.py:26
+#: cms_plugins.py:27
 msgid ""
 "List of the activities in the specified collection for a particular user."
 msgstr ""
 
-#: cms_plugins.py:29
+#: cms_plugins.py:31
 msgid "Activity Search"
 msgstr ""
 
-#: cms_plugins.py:30
+#: cms_plugins.py:32
 msgid ""
 "Search public activities. These fields are ignored if the \"Google+ User Id"
 "\" is filled."
 msgstr ""
 
-#: conf.py:7
+#: conf.py:8
 msgid "Example Template using Twitter Bootstrap"
 msgstr ""
 
-#: globals.py:69
+#: globals.py:71
 msgid "Afrikaans"
 msgstr ""
 
-#: globals.py:70
+#: globals.py:72
 msgid "Amharic"
 msgstr ""
 
-#: globals.py:71
+#: globals.py:73
 msgid "Arabic"
 msgstr ""
 
-#: globals.py:72
+#: globals.py:74
 msgid "Basque"
 msgstr ""
 
-#: globals.py:73
+#: globals.py:75
 msgid "Bengali"
 msgstr ""
 
-#: globals.py:74
+#: globals.py:76
 msgid "Bulgarian"
 msgstr ""
 
-#: globals.py:75
+#: globals.py:77
 msgid "Catalan"
 msgstr ""
 
-#: globals.py:76
+#: globals.py:78
 msgid "Chinese (Hong Kong)"
 msgstr ""
 
-#: globals.py:77
+#: globals.py:79
 msgid "Chinese (Simplified)"
 msgstr ""
 
-#: globals.py:78
+#: globals.py:80
 msgid "Chinese (Traditional)"
 msgstr ""
 
-#: globals.py:79
+#: globals.py:81
 msgid "Croatian"
 msgstr ""
 
-#: globals.py:80
+#: globals.py:82
 msgid "Czech"
 msgstr ""
 
-#: globals.py:81
+#: globals.py:83
 msgid "Danish"
 msgstr ""
 
-#: globals.py:82
+#: globals.py:84
 msgid "Dutch"
 msgstr ""
 
-#: globals.py:83
+#: globals.py:85
 msgid "English (UK)"
 msgstr ""
 
-#: globals.py:84
+#: globals.py:86
 msgid "English (US)"
 msgstr ""
 
-#: globals.py:85
+#: globals.py:87
 msgid "Estonian"
 msgstr ""
 
-#: globals.py:86
+#: globals.py:88
 msgid "Filipino"
 msgstr ""
 
-#: globals.py:87
+#: globals.py:89
 msgid "Finnish"
 msgstr ""
 
-#: globals.py:88
+#: globals.py:90
 msgid "French"
 msgstr ""
 
-#: globals.py:89
+#: globals.py:91
 msgid "French (Canadian)"
 msgstr ""
 
-#: globals.py:90
+#: globals.py:92
 msgid "Galician"
 msgstr ""
 
-#: globals.py:91
+#: globals.py:93
 msgid "German"
 msgstr ""
 
-#: globals.py:92
+#: globals.py:94
 msgid "Greek"
 msgstr ""
 
-#: globals.py:93
+#: globals.py:95
 msgid "Gujarati"
 msgstr ""
 
-#: globals.py:94
+#: globals.py:96
 msgid "Hebrew"
 msgstr ""
 
-#: globals.py:95
+#: globals.py:97
 msgid "Hindi"
 msgstr ""
 
-#: globals.py:96
+#: globals.py:98
 msgid "Hungarian"
 msgstr ""
 
-#: globals.py:97
+#: globals.py:99
 msgid "Icelandic"
 msgstr ""
 
-#: globals.py:98
+#: globals.py:100
 msgid "Indonesian"
 msgstr ""
 
-#: globals.py:99
+#: globals.py:101
 msgid "Italian"
 msgstr ""
 
-#: globals.py:100
+#: globals.py:102
 msgid "Japanese"
 msgstr ""
 
-#: globals.py:101
+#: globals.py:103
 msgid "Kannada"
 msgstr ""
 
-#: globals.py:102
+#: globals.py:104
 msgid "Korean"
 msgstr ""
 
-#: globals.py:103
+#: globals.py:105
 msgid "Latvian"
 msgstr ""
 
-#: globals.py:104
+#: globals.py:106
 msgid "Lithuanian"
 msgstr ""
 
-#: globals.py:105
+#: globals.py:107
 msgid "Malay"
 msgstr ""
 
-#: globals.py:106
+#: globals.py:108
 msgid "Malayalam"
 msgstr ""
 
-#: globals.py:107
+#: globals.py:109
 msgid "Marathi"
 msgstr ""
 
-#: globals.py:108
+#: globals.py:110
 msgid "Norwegian"
 msgstr ""
 
-#: globals.py:109
+#: globals.py:111
 msgid "Persian"
 msgstr ""
 
-#: globals.py:110
+#: globals.py:112
 msgid "Polish"
 msgstr ""
 
-#: globals.py:111
+#: globals.py:113
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: globals.py:112
+#: globals.py:114
 msgid "Portuguese (Portugal)"
 msgstr ""
 
-#: globals.py:113
+#: globals.py:115
 msgid "Romanian"
 msgstr ""
 
-#: globals.py:114
+#: globals.py:116
 msgid "Russian"
 msgstr ""
 
-#: globals.py:115
+#: globals.py:117
 msgid "Serbian"
 msgstr ""
 
-#: globals.py:116
+#: globals.py:118
 msgid "Slovak"
 msgstr ""
 
-#: globals.py:117
+#: globals.py:119
 msgid "Slovenian"
 msgstr ""
 
-#: globals.py:118
+#: globals.py:120
 msgid "Spanish"
 msgstr ""
 
-#: globals.py:119
+#: globals.py:121
 msgid "Spanish (Latin America)"
 msgstr ""
 
-#: globals.py:120
+#: globals.py:122
 msgid "Swahili"
 msgstr ""
 
-#: globals.py:121
+#: globals.py:123
 msgid "Swedish"
 msgstr ""
 
-#: globals.py:122
+#: globals.py:124
 msgid "Tamil"
 msgstr ""
 
-#: globals.py:123
+#: globals.py:125
 msgid "Telugu"
 msgstr ""
 
-#: globals.py:124
+#: globals.py:126
 msgid "Thai"
 msgstr ""
 
-#: globals.py:125
+#: globals.py:127
 msgid "Turkish"
 msgstr ""
 
-#: globals.py:126
+#: globals.py:128
 msgid "Ukrainian"
 msgstr ""
 
-#: globals.py:127
+#: globals.py:129
 msgid "Urdu"
 msgstr ""
 
-#: globals.py:128
+#: globals.py:130
 msgid "Vietnamese"
 msgstr ""
 
-#: globals.py:129
+#: globals.py:131
 msgid "Zulu"
 msgstr ""
 
-#: globals.py:137
+#: globals.py:139
 msgid "best"
 msgstr ""
 
-#: globals.py:138
+#: globals.py:140
 msgid "recent"
 msgstr ""
 
-#: models.py:18
+#: models.py:20
 msgid "template"
 msgstr ""
 
-#: models.py:19
+#: models.py:22
 msgid "item"
 msgstr ""
 
-#: models.py:21
+#: models.py:24
 msgid ""
 "Number of Google Plus activities to return. From 1 to 100. Default is 10."
 msgstr ""
 
-#: models.py:24
+#: models.py:27
 msgid "truncate chars"
 msgstr ""
 
-#: models.py:25
+#: models.py:28
 msgid ""
 "Truncates the content, annotation and attachment after a certain number of "
 "characters."
 msgstr ""
 
-#: models.py:26
+#: models.py:31
 msgid "Google+ User Id"
 msgstr ""
 
-#: models.py:27
+#: models.py:32
 msgid "The ID of the user to get activities for"
 msgstr ""
 
-#: models.py:30
+#: models.py:35
 msgid "search query"
 msgstr ""
 
-#: models.py:30
+#: models.py:36
 msgid "Full-text search query string."
 msgstr ""
 
-#: models.py:32
+#: models.py:38
 msgid "preferred language"
 msgstr ""
 
-#: models.py:33
+#: models.py:40
 msgid "Optional. Specify the preferred language to search with."
 msgstr ""
 
-#: models.py:36
+#: models.py:45
 msgid ""
 "Optional. Specifies how to order search results. 'best': Sort activities by "
 "relevance to the user, most relevant first, 'recent': Sort activities by "
 "published date, most recent first."
 msgstr ""
 
-#: models.py:45
+#: models.py:57
 msgid "\"Google+ user id\" or \"Search query\" must be provided"
 msgstr ""
 
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:19
+#: templates/cmsplugin_googleplus/twitter_bootstrap.html:14
 msgid "Published"
 msgstr ""
 
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:29
-msgid "originally shared"
-msgstr ""
-
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:49
-msgid "Photo"
-msgstr ""
-
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:51
-msgid "Video"
-msgstr ""
-
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:53
-msgid "Article"
-msgstr ""
-
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:56
-msgid "Album"
-msgstr ""
-
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:66
-msgid "Read more"
-msgstr ""
-
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:70
-msgid "replies"
+#: templates/cmsplugin_googleplus/twitter_bootstrap.html:55
+#, python-format
+msgid ""
+"\n"
+"                        Originally shared by %(shared_by)s\n"
+"                        "
 msgstr ""
