@@ -6,6 +6,3 @@ file_filter = cmsplugin_googleplus/locale/<lang>/LC_MESSAGES/django.po
 source_file = cmsplugin_googleplus/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
-
-[main]
-host = https://www.transifex.com
