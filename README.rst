@@ -7,7 +7,7 @@ You can find a `preview <https://github.com/itbabu/cmsplugin-googleplus#preview>
 Info
 ----
 
-.. image:: https://pypip.in/status/cmsplugin-googleplus/badge.svg
+.. image:: https://img.shields.io/pypi/status/cmsplugin-googleplus.svg?style=plastic
     :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
     :alt: Development Status: Beta
 
@@ -23,11 +23,11 @@ Info
     :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
     :alt: License
 
-.. image:: https://pypip.in/wheel/cmsplugin-googleplus/badge.svg
+.. image:: https://img.shields.io/pypi/wheel/cmsplugin-googleplus.svg?style=plastic
     :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
     :alt: Wheel Status
 
-.. image:: https://pypip.in/py_versions/cmsplugin-googleplus/badge.svg
+.. image:: https://img.shields.io/pypi/pyversions/cmsplugin-googleplus.svg?style=plastic
     :target: https://pypi.python.org/pypi/cmsplugin-googleplus/
     :alt: Supported Python Versions
 
@@ -49,7 +49,7 @@ Continuous Integration
 Documentation
 -------------
 
-.. image:: https://readthedocs.org/projects/docs/badge/?version=latest
+.. image:: https://readthedocs.org/projects/cmsplugin-googleplus/badge/?version=latest
     :alt: Documentation
     :target: http://cmsplugin-googleplus.readthedocs.org/en/latest/
 
