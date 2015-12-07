@@ -4,7 +4,6 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div>
-
                 <a href="{{ item.actor.url }}" target="_blank">
                     <img class="img-circle" src="{{ item.actor.image.url }}">
                 </a>
@@ -38,7 +37,7 @@
                         <hr>
                     {% endif %}
                     {% if attachment.image.url %}
-                        <a href="{{ item.object.url }}" target="_blank">
+                        <a href="{{ item.object.url }}">
                             <img class="center-block img-responsive"
                                  src="{{ attachment.image.url }}">
                         </a>
@@ -51,7 +50,7 @@
                 {% if item.verb == "share" %}
 
                 <p class="text-muted" style="margin-top: 10px">
-                    <a href="{{ item.object.url }}" class="small" target="_blank">
+                    <a href="{{ item.object.url }}" class="small">
                         {% blocktrans with shared_by=item.object.actor.displayName %}
                         Originally shared by {{ shared_by }}
                         {% endblocktrans %}
@@ -66,9 +65,9 @@
 
                 <div>
                     <div class="text-muted pull-left round">
-                        <a href="{{ item.object.url }}" target="_blank"
-                           class="btn btn-default btn">
-                            <strong>+1</strong>
+                        <a href="{{ item.object.url }}" type="button"
+                           class="btn btn-default btn btn-fab">
+                            <i class="material-icons">plus one</i>
                         </a>
                         {% if item.object.plusoners.totalItems != 0 %}
                         &nbsp;&nbsp;
@@ -77,18 +76,18 @@
 
                     </div>
                     <div class="text-muted pull-right">
-                        <a href="{{ item.object.url }}" target="_blank"
-                           class="btn btn-default">
-                            <i class="glyphicon glyphicon-comment"></i>
+                        <a href="{{ item.object.url }}" type="button"
+                           class="btn btn-default btn-fab">
+                            <i class="material-icons">comment</i>
                         </a>
                         {% if item.object.replies.totalItems != 0 %}
                         &nbsp;&nbsp;<strong>{{ item.object.replies.totalItems }}</strong>
                         {% endif %}
-                        <a href="{{ item.object.url }}" target="_blank"
-                           class="btn btn-default"
+                        <a href="{{ item.object.url }}" type="button"
+                           class="btn btn-default btn-fab"
                            style="margin-left: 40px">
 
-                            <span class="glyphicon glyphicon-share-alt"></span>
+                            <i class="material-icons">share</i>
                         </a>
                         {% if item.object.resharers.totalItems != 0 %}
                             &nbsp;&nbsp;<strong>{{ item.object.resharers.totalItems }}</strong>

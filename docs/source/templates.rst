@@ -1,20 +1,20 @@
 Templates
 =========
 
-This plugin has a template that uses `Twitter Bootstrap 3 <http://getbootstrap.com/>`_.
+This plugin has a template that uses `Material Design for Bootstrap <http://fezvrasta.github.io/bootstrap-material-design//>`_ .
 
 You can use it as example skeleton for your templates.
 
 As quickstart you can use a CDN for the related css::
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-and the related javascript::
-
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.2/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.2/css/ripples.min.css">
 
 Custom Template
 ---------------
