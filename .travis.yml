@@ -7,6 +7,7 @@ python:
     - 2.7
     - 3.3
     - 3.4
+    - 3.5
 
 env:
   matrix:
@@ -14,6 +15,10 @@ env:
     - DJANGO=1.8 DJANGOCMS=3
 
 
+matrix:
+  exclude:
+    - python: 3.5
+    env: DJANGO=1.7 DJANGOCMS=3
 
 install:
   - pip install -q -r "test_requirements/django-$DJANGO.txt"
