@@ -1,5 +1,10 @@
 {% load sekizai_tags i18n humanize %}
 <div>
+    {%  if user.is_staff and alert_message %}
+        <div class="alert alert-danger" role="alert">
+            <p>{{ alert_message }}</p>
+        </div>
+    {% endif %}
     {% for item in activity_list %}
     <div class="panel panel-default">
         <div class="panel-body">

@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.core.exceptions import ValidationError
 from django.test import TestCase
+from django.utils.encoding import force_text
 
 from ..models import GooglePlusActivities
 
@@ -22,9 +23,9 @@ class GooglePlusActivitiesTestCase(TestCase):
         google_plus_activities.google_user = 'test_user'
         google_plus_activities.clean()
 
-    def test_unicode(self):
+    def test_str(self):
         google_plus_activities = GooglePlusActivities(query='test')
-        google_plus_activities.__unicode__()
+        force_text(google_plus_activities)
         google_plus_activities.query = None
         google_plus_activities.google_user = 'test_user'
-        google_plus_activities.__unicode__()
+        force_text(google_plus_activities)

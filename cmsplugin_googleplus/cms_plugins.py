@@ -40,9 +40,10 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context['instance'] = instance
-        activity_list = self.get_latest_activities(instance) \
+        activity_list, alert_msg = self.get_latest_activities(instance) \
             if instance.google_user else self.get_search_activities(instance)
         context['activity_list'] = self.parse_datetime(activity_list)
+        context['alert_message'] = alert_msg
 
         return context
 
@@ -52,6 +53,7 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
         :type instance: GooglePlusActivities
         :returns: list of dictionaries -- the recent activities:
             https://developers.google.com/+/api/latest/activities
+            and an alert if any.
 
         Note: Activities are returned from the activities.list method in the
         same order that they are displayed on the google+ page. This means that
@@ -62,29 +64,31 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
         """
         key_name = instance.get_cache_key(instance.pk)
         activity_list = cache.get(key_name, None)
+        alert_msg = ''
         if not activity_list:
             googleplus_api = GooglePlusAPI(
                 developer_key=instance.google_api_key)
-            activity_list = googleplus_api.get_user_activity_list(
+            activity_list, alert_msg = googleplus_api.get_user_activity_list(
                 user_id=instance.google_user, results=instance.items)
-            cache.set(key_name, activity_list,
-                      GOOGLEPLUS_PLUGIN_CACHE_DURATION)
-        return activity_list
+            if not alert_msg:
+                cache.set(key_name, activity_list, GOOGLEPLUS_PLUGIN_CACHE_DURATION)
+        return activity_list, alert_msg
 
     def get_search_activities(self, instance):
         key_name = instance.get_cache_key(instance.pk)
         activity_list = cache.get(key_name, None)
+        alert_msg = ''
         if not activity_list:
             googleplus_api = GooglePlusAPI(
                 developer_key=instance.google_api_key)
-            activity_list = googleplus_api.get_search_activity_list(
+            activity_list, alert_msg = googleplus_api.get_search_activity_list(
                 query=instance.query,
                 preferred_language=instance.preferred_language,
                 order_by=instance.order_by,
                 results=instance.items)
-            cache.set(key_name, activity_list,
-                      GOOGLEPLUS_PLUGIN_CACHE_DURATION)
-        return activity_list
+            if not alert_msg:
+                cache.set(key_name, activity_list, GOOGLEPLUS_PLUGIN_CACHE_DURATION)
+        return activity_list, alert_msg
 
     def parse_datetime(self, activity_list):
         """

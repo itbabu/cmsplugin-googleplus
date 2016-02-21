@@ -5,6 +5,7 @@ from django.core.cache import cache
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
 from .conf import GOOGLEPLUS_PLUGIN_TEMPLATES
@@ -13,6 +14,7 @@ from .globals import (
     RECENT)
 
 
+@python_2_unicode_compatible
 class GooglePlusActivities(CMSPlugin):
     """
     Plugin for including Google+ activities
@@ -55,7 +57,7 @@ class GooglePlusActivities(CMSPlugin):
                     'API key.'),
         max_length=75)
 
-    def __unicode__(self):
+    def __str__(self):
         return ('Google User id: %s' % self.google_user) \
             if self.google_user else ('Search Query: %s' % self.query)
 

@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import logging
 
-from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
@@ -44,7 +44,7 @@ class GooglePlusAPI(object):
         :type user_id: unicode or str
         :type results: unsigned integer
         :raises: TypeError, ValueError
-        :returns: The list of user activities
+        :returns: The list of user activities and an alert message, if any.
         """
         if self.service:
             try:
@@ -54,17 +54,13 @@ class GooglePlusAPI(object):
                     maxResults=results, fields='items')
                 activities_document = request.execute()
                 if 'items' in activities_document:
-                    return activities_document['items']
+                    return activities_document['items'], ''
                 else:
-                    return []
+                    return [], _('No items found')
             except HttpError as e:
-                logger.exception('Google Plus API error: % s' % e)
-                if not settings.DEBUG:
-                    # fail silently if it's not possible to connect to
-                    # the service
-                    return []
-                else:
-                    raise
+                error_msg = _('Google Plus API error: `%s`' % (e, ))
+                logger.error(error_msg)
+                return [], error_msg
 
     def get_search_activity_list(self, query, preferred_language=None,
                                  order_by=None, results=10):
@@ -97,7 +93,7 @@ class GooglePlusAPI(object):
         :type order_by: str
         :type results: unsigned integer
 
-        :returns: The list of activities, result of the search.
+        :returns: The list of activities, result of the search an alert message, if any.
         """
         if self.service:
             try:
@@ -111,14 +107,10 @@ class GooglePlusAPI(object):
                 request = activities_resource.search(**data)
                 activities_document = request.execute()
                 if 'items' in activities_document:
-                    return activities_document['items']
+                    return activities_document['items'], ''
                 else:
-                    return []
+                    return [], _('No items found')
             except HttpError as e:
-                logger.exception('Google Plus API error: % s' % e)
-                if not settings.DEBUG:
-                    # fail silently if it's not possible to connect to the
-                    # service
-                    return []
-                else:
-                    raise
+                error_msg = _('Google Plus API error: `%s`' % (e,))
+                logger.error(error_msg)
+                return [], error_msg

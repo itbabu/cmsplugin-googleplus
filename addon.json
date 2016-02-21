@@ -1,0 +1,7 @@
+{
+    "package-name": "cmsplugin-googleplus",
+    "installed-apps": [
+        "cmsplugin_googleplus",
+        "django.contrib.humanize"
+    ]
+}

@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.test import TestCase
-from django.test.utils import override_settings
+from django.utils.encoding import force_text
 from googleapiclient.errors import HttpError
 from httplib2 import Response
 from mock import Mock, patch
@@ -23,13 +23,13 @@ class GooglePlusAPITestCase(BaseGooglePlusTestCase):
         self.assertIsInstance(google_plus_api, GooglePlusAPI)
 
     def test_user_activity_list_fetching(self):
-        activity_list = self.google_plus_api.get_user_activity_list(
+        activity_list, alert_message = self.google_plus_api.get_user_activity_list(
             user_id='test')
         self.assertEqual(len(activity_list), 20)
         self.assertEqual(activity_list[0]['actor']['displayName'], 'Google')
 
     def test_search_activity_list_fetching(self):
-        activity_list = self.google_plus_api.get_search_activity_list(
+        activity_list, alert_message = self.google_plus_api.get_search_activity_list(
             query='test', order_by=RECENT,
             preferred_language=ITALIAN)
         self.assertEqual(len(activity_list), 20)
@@ -51,64 +51,61 @@ class GooglePlusAPITestCaseWithErrors(TestCase):
                        'x-frame-options': 'SAMEORIGIN',
                        'content-type': 'application/json; charset=UTF-8'}
 
-    def test_api_returns_unexpected_values(self):
+    def test_get_search_activity_list_returns_unexpected_values(self):
         mock = Mock()
         mock.configure_mock(**{
-            "activities.return_value.list.return_value.execute.return_value":
-                'whoops',
-            "activities.return_value.search.return_value.execute.return_value":
-                'whoops'
+            "activities.return_value.search.return_value.execute.return_value": 'whoops'
         })
+
         with patch("cmsplugin_googleplus.googleplus.build", return_value=mock):
             google_plus_api = GooglePlusAPI(TEST_DEVELOPER_KEY)
-            user_activity_list = google_plus_api.get_user_activity_list(
-                user_id='test')
-            self.assertEqual(user_activity_list, [])
-            search_activity_list = google_plus_api.get_search_activity_list(
+            search_activity_list, alert_message = google_plus_api.get_search_activity_list(
                 query='test')
             self.assertEqual(search_activity_list, [])
+            self.assertEqual(force_text(alert_message), 'No items found')
 
-    def test_api_fails_silenty_if_http_error_on_production(self):
+    def test_get_user_activity_list_returns_unexpected_values(self):
         mock = Mock()
+        mock.configure_mock(**{
+            "activities.return_value.list.return_value.execute.return_value": 'whoops',
+        })
 
+        with patch("cmsplugin_googleplus.googleplus.build", return_value=mock):
+            google_plus_api = GooglePlusAPI(TEST_DEVELOPER_KEY)
+            user_activity_list, alert_message = google_plus_api.get_user_activity_list(
+                user_id='test')
+            self.assertEqual(user_activity_list, [])
+
+            self.assertEqual(force_text(alert_message), 'No items found')
+
+    def test_staff_gets_alert_if_http_error_on_user_activity_list(self):
+        mock = Mock()
         mock.configure_mock(**{
             "activities.return_value.list.return_value.execute.side_effect":
                 HttpError(
                     content=self.error_content,
                     resp=Response(self.error_resp_dict)),
-            "activities.return_value.search.return_value.execute.side_effect":
-                HttpError(
-                    content=self.error_content,
-                    resp=Response(self.error_resp_dict))
         })
+
         with patch("cmsplugin_googleplus.googleplus.build", return_value=mock):
             google_plus_api = GooglePlusAPI(TEST_DEVELOPER_KEY)
-            user_activity_list = google_plus_api.get_user_activity_list(
+            user_activity_list, alert_one = google_plus_api.get_user_activity_list(
                 user_id='test')
             self.assertEqual(user_activity_list, [])
-            search_activity_list = google_plus_api.get_search_activity_list(
-                query='test')
-            self.assertEqual(search_activity_list, [])
+            self.assertEqual(alert_one, 'Google Plus API error: `<HttpError 400 "Bad Request">`')
 
-    @override_settings(DEBUG=True)
-    def test_api_fails_loudly_on_development(self):
+    def test_staff_gets_alert_if_http_error_on_search_activity_list(self):
         mock = Mock()
-
         mock.configure_mock(**{
-            "activities.return_value.list.return_value.execute.side_effect":
-                HttpError(
-                    content=self.error_content,
-                    resp=Response(self.error_resp_dict)),
             "activities.return_value.search.return_value.execute.side_effect":
                 HttpError(
                     content=self.error_content,
                     resp=Response(self.error_resp_dict))
         })
+
         with patch("cmsplugin_googleplus.googleplus.build", return_value=mock):
             google_plus_api = GooglePlusAPI(TEST_DEVELOPER_KEY)
-            self.assertRaises(HttpError,
-                              google_plus_api.get_user_activity_list,
-                              {'user_id': 'test'})
-            self.assertRaises(HttpError,
-                              google_plus_api.get_search_activity_list,
-                              {'query': 'test'})
+            search_activity_list, alert = google_plus_api.get_search_activity_list(
+                query='test')
+            self.assertEqual(search_activity_list, [])
+            self.assertEqual(alert, 'Google Plus API error: `<HttpError 400 "Bad Request">`')
