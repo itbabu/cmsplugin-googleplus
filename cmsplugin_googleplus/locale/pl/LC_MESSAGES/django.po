@@ -1,22 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Michał Fita <michal.fita@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: cmsplugin-googleplus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-29 17:50+0100\n"
+"POT-Creation-Date: 2016-02-21 20:59+0100\n"
 "PO-Revision-Date: 2016-01-30 17:02+0000\n"
 "Last-Translator: Michał Fita <michal.fita@gmail.com>\n"
-"Language-Team: Polish (http://www.transifex.com/itbabu/cmsplugin-googleplus/language/pl/)\n"
+"Language-Team: Polish (http://www.transifex.com/itbabu/cmsplugin-googleplus/"
+"language/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #: cms_plugins.py:19
 msgid "Google Plus Activity Feed"
@@ -45,9 +47,11 @@ msgstr "Szukanie aktywności"
 
 #: cms_plugins.py:34
 msgid ""
-"Search public activities. These fields are ignored if the \"Google+ User "
-"Id\" is filled."
-msgstr "Szukaj publicznej aktywności. Te pola są ignorowane, jeśli wypełnione jest \"Google+ id użytkownika\"."
+"Search public activities. These fields are ignored if the \"Google+ User Id"
+"\" is filled."
+msgstr ""
+"Szukaj publicznej aktywności. Te pola są ignorowane, jeśli wypełnione jest "
+"\"Google+ id użytkownika\"."
 
 #: conf.py:8
 msgid "Example Template using Twitter Bootstrap"
@@ -305,86 +309,105 @@ msgstr "najlepszy"
 msgid "recent"
 msgstr "ostatni"
 
-#: models.py:21
+#: googleplus.py:59 googleplus.py:112
+msgid "No items found"
+msgstr ""
+
+#: googleplus.py:61 googleplus.py:114
+#, python-format
+msgid "Google Plus API error: `%s`"
+msgstr ""
+
+#: models.py:23
 msgid "template"
 msgstr "szablon"
 
-#: models.py:23
+#: models.py:25
 msgid "item"
 msgstr "element"
 
-#: models.py:25
+#: models.py:27
 msgid ""
 "Number of Google Plus activities to return. From 1 to 100. Default is 10."
-msgstr "Ilość aktywności Google Plus do zwrócenia. Od 1 do 100. Domyślnie to 10."
+msgstr ""
+"Ilość aktywności Google Plus do zwrócenia. Od 1 do 100. Domyślnie to 10."
 
-#: models.py:28
+#: models.py:30
 msgid "truncate chars"
 msgstr "obcinaj znaki"
 
-#: models.py:29
+#: models.py:31
 msgid ""
 "Truncates the content, annotation and attachment after a certain number of "
 "characters."
 msgstr "Obcina treści, adnotacji i załączniki po określonej liczbie znaków."
 
-#: models.py:32
+#: models.py:34
 msgid "Google+ User Id"
 msgstr "Id użytkownika Google+"
 
-#: models.py:33
+#: models.py:35
 msgid "The ID of the user to get activities for"
 msgstr "Identyfikator użytkownika dla którego pobierać aktywność"
 
-#: models.py:36
+#: models.py:38
 msgid "search query"
 msgstr "zapytanie"
 
-#: models.py:37
+#: models.py:39
 msgid "Full-text search query string."
 msgstr "Ciąg zapytania do wyszukiwania pełnotekstowego."
 
-#: models.py:39
+#: models.py:41
 msgid "preferred language"
 msgstr "preferowany język"
 
-#: models.py:41
+#: models.py:43
 msgid "Optional. Specify the preferred language to search with."
 msgstr "Opcjonalne. Określa preferowany język wyszukiwania."
 
-#: models.py:44
+#: models.py:46
 msgid "order by"
 msgstr "kolejność według"
 
-#: models.py:47
+#: models.py:49
 msgid ""
 "Optional. Specifies how to order search results. 'best': Sort activities by "
 "relevance to the user, most relevant first, 'recent': Sort activities by "
 "published date, most recent first."
-msgstr "Opcjonalne. Określa, jak uporządkować wyniki wyszukiwania. 'najlepsze': sortowanie działań przez odpowiedniość do użytkownika, najbardziej odpowiednie pierwsze, 'najnowsze': kolejność aktywności według daty publikacji, najnowsze na początku."
+msgstr ""
+"Opcjonalne. Określa, jak uporządkować wyniki wyszukiwania. 'najlepsze': "
+"sortowanie działań przez odpowiedniość do użytkownika, najbardziej "
+"odpowiednie pierwsze, 'najnowsze': kolejność aktywności według daty "
+"publikacji, najnowsze na początku."
 
-#: models.py:52
+#: models.py:54
 msgid "Google API key"
 msgstr "Klucz Google API"
 
-#: models.py:53
+#: models.py:55
 msgid ""
 "To use the Google+ API, you must register your project on the Google "
 "Developers Console and get a Google API key."
-msgstr "Aby korzystać z interfejsu API Google+, musisz zarejestrować swój projekt na Konsoli Programistów Google i otrzymać klucz Google API."
+msgstr ""
+"Aby korzystać z interfejsu API Google+, musisz zarejestrować swój projekt na "
+"Konsoli Programistów Google i otrzymać klucz Google API."
 
-#: models.py:73
+#: models.py:75
 msgid "\"Google+ user id\" or \"Search query\" must be provided"
 msgstr "\"Id użytkownika Google+\" lub \"Zapytanie\" musi być podane"
 
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:14
+#: templates/cmsplugin_googleplus/twitter_bootstrap.html:18
 msgid "Published"
 msgstr "Opublikowane"
 
-#: templates/cmsplugin_googleplus/twitter_bootstrap.html:55
+#: templates/cmsplugin_googleplus/twitter_bootstrap.html:59
 #, python-format
 msgid ""
 "\n"
 "                        Originally shared by %(shared_by)s\n"
 "                        "
-msgstr "\nPierwotnie udostępnione przez %(shared_by)s\n "
+msgstr ""
+"\n"
+"Pierwotnie udostępnione przez %(shared_by)s\n"
+" "
