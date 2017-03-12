@@ -6,17 +6,6 @@ import sys
 import django
 from django.conf import settings
 
-TEMPLATE_CONTEXT_PROCESSORS = [
-    'django.contrib.auth.context_processors.auth',
-    'django.contrib.messages.context_processors.messages',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.request',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'cms.context_processors.cms_settings',
-    'sekizai.context_processors.sekizai',
-]
-
 
 def configure():
     if not settings.configured:
@@ -75,7 +64,16 @@ def configure():
                     'DIRS': [location('templates'), ],
                     'APP_DIRS': True,
                     'OPTIONS': {
-                        'context_processors': TEMPLATE_CONTEXT_PROCESSORS,
+                        'context_processors': [
+                            'django.contrib.auth.context_processors.auth',
+                            'django.contrib.messages.context_processors.messages',
+                            'django.template.context_processors.i18n',
+                            'django.template.context_processors.request',
+                            'django.template.context_processors.media',
+                            'django.template.context_processors.static',
+                            'cms.context_processors.cms_settings',
+                            'sekizai.context_processors.sekizai',
+                        ],
                         'debug': False
                     },
                 },
