@@ -11,11 +11,14 @@ python:
 
 env:
   matrix:
-    - DJANGO=1.8 DJANGOCMS=3
+    - DJANGO=1.8.17
+    - DJANGO=1.9.12
+    - DJANGO=1.10.6
 
 
 install:
-  - pip install -q -r "test_requirements/django-$DJANGO.txt"
+  - pip install -q -r "test_requirements/base.txt"
+  - pip install Django==$DJANGO
 
 
 script:
