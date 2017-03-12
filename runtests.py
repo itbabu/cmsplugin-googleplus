@@ -20,17 +20,14 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
 def configure():
     if not settings.configured:
-
         # Helper function to extract absolute path
         location = lambda x: os.path.join(
             os.path.dirname(os.path.realpath(__file__)),
-                'cmsplugin_googleplus', 'tests', 'example_project', x)
+            'cmsplugin_googleplus', 'tests', 'example_project', x)
 
         test_settings = {
             'LANGUAGE_CODE': 'en',
-            'LANGUAGES': (
-                ('en', 'English'),
-            ),
+            'LANGUAGES': (('en', 'English'),),
             'DATABASES': {
                 'default': {
                     'ENGINE': 'django.db.backends.sqlite3',
@@ -71,27 +68,18 @@ def configure():
             'DEBUG': False,
             'SITE_ID': 1,
             'APPEND_SLASH': True,
-            'CMS_TEMPLATES': (('nav_playground.html', 'Test Template'),)
-        }
-        if django.VERSION < (1, 8, 0):
-            test_settings['TEMPLATE_CONTEXT_PROCESSORS'] = \
-                TEMPLATE_CONTEXT_PROCESSORS
-            test_settings['TEMPLATE_DIRS'] = [location('templates'), ]
-        else:
-            test_settings['TEMPLATES'] = [
+            'CMS_TEMPLATES': (('nav_playground.html', 'Test Template'),),
+            'TEMPLATES': [
                 {
-                    'BACKEND':
-                        'django.template.backends.django.DjangoTemplates',
-                    'DIRS': [
-                        location('templates'),
-                    ],
+                    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                    'DIRS': [location('templates'), ],
                     'APP_DIRS': True,
                     'OPTIONS': {
                         'context_processors': TEMPLATE_CONTEXT_PROCESSORS,
-                        'debug': True
+                        'debug': False
                     },
                 },
-            ]
+            ]}
         settings.configure(**test_settings)
 
 

@@ -17,7 +17,6 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
     """
     model = GooglePlusActivities
     name = _("Google Plus Activity Feed")
-    render_template = False
     fieldsets = (
         (_('Settings'), {
             'fields': ('google_api_key', )
@@ -46,6 +45,9 @@ class GooglePlusActivitiesPlugin(CMSPluginBase):
         context['alert_message'] = alert_msg
 
         return context
+
+    def get_render_template(self, context, instance, placeholder):
+        return instance.render_template
 
     def get_latest_activities(self, instance):
         """

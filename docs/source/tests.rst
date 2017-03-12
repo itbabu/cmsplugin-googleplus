@@ -3,9 +3,9 @@ Tests
 
 Requirements
 ------------
-* `mock - 1.0.1 <https://pypi.python.org/pypi/mock>`_
-* `django-nose - 1.2 <https://pypi.python.org/pypi/django-nose>`_
-* `coverage - 3.7 <https://pypi.python.org/pypi/coverage>`_
+* `mock - 2.0.0 <https://pypi.python.org/pypi/mock>`_
+* `django-nose - 1.4.4 <https://pypi.python.org/pypi/django-nose>`_
+* `coverage - 4.3.4 <https://pypi.python.org/pypi/coverage>`_
 
 Run tests with coverage
 -----------------------

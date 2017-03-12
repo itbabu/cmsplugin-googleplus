@@ -35,11 +35,11 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
-        'google-api-python-client>=1.4.2',
-        'python-dateutil>=2.4.2'
+        'google-api-python-client>=1.6.2',
+        'python-dateutil>=2.6.0'
     ],
     tests_require=[
-        'mock>=1.3.0',
+        'mock>=2.0.0',
         'django-nose>=1.4.2'
     ],
     packages=find_packages()
